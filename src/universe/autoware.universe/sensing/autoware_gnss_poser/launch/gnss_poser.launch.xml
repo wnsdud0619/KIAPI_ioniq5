@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <arg name="param_file" default="$(find-pkg-share autoware_gnss_poser)/config/gnss_poser.param.yaml"/>
-  <arg name="input_topic_fix" default="/fix"/>
+  <arg name="input_topic_fix" default="/novatel/oem7/fix"/>
   <arg name="input_topic_orientation" default="/autoware_orientation"/>
   <arg name="output_topic_gnss_pose" default="gnss_pose"/>
   <arg name="output_topic_gnss_pose_cov" default="gnss_pose_cov"/>

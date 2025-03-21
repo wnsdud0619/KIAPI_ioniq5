@@ -13,7 +13,7 @@
         },
         "gnss_base_frame": {
           "type": "string",
-          "default": "gnss_base_link",
+          "default": "gps",
           "description": "frame id for gnss_base_frame"
         },
         "map_frame": {
