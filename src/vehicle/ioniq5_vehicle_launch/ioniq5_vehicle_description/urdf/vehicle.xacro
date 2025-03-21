@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find ioniq5_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="1.5708 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://ioniq5_vehicle_description/mesh/IONIQ5.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
