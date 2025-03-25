@@ -1,0 +1,12 @@
+/**:
+  ros__parameters:
+    wheel_radius: 0.216 #ioniq5(235/55R)
+    wheel_width: 0.235 #ioniq5(235/55R)
+    wheel_base: 3.00 # between front wheel center and rear wheel center (ioniq5)
+    wheel_tread: 1.637 # between left wheel center and right wheel center (ioniq5)
+    front_overhang: 0.845 # between front wheel center and vehicle front (ioniq5)
+    rear_overhang: 0.790 # between rear wheel center and vehicle rear (ioniq5)
+    left_overhang: 0.126 # between left wheel center and vehicle left (ioniq5)
+    right_overhang: 0.126 # between right wheel center and vehicle right (ioniq5)
+    vehicle_height: 1.65 #(ioniq5)
+    max_steer_angle: 0.70 # [rad]
