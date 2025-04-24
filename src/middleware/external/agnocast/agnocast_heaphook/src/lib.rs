@@ -1,10 +1,9 @@
 use rlsf::Tlsf;
 use std::{
     alloc::Layout,
-    cell::Cell,
-    ffi::CStr,
+    ffi::{CStr, CString},
     mem::MaybeUninit,
-    os::raw::{c_int, c_void},
+    os::raw::{c_char, c_int, c_void},
     sync::{
         atomic::{AtomicBool, AtomicUsize, Ordering},
         Mutex, OnceLock,
@@ -12,7 +11,11 @@ use std::{
 };
 
 extern "C" {
-    fn initialize_agnocast(size: usize) -> *mut c_void;
+    fn initialize_agnocast(
+        size: usize,
+        version: *const c_char,
+        version_str_length: usize,
+    ) -> *mut c_void;
     fn agnocast_get_borrowed_publisher_num() -> u32;
 }
 
@@ -130,7 +133,8 @@ type SLBitmap = u64; // SLBitmap should contain at least SLLEN bits
 type TlsfType = Tlsf<'static, FLBitmap, SLBitmap, FLLEN, SLLEN>;
 static TLSF: OnceLock<Mutex<TlsfType>> = OnceLock::new();
 
-fn init_tlsf() -> Mutex<TlsfType> {
+#[cfg(not(test))]
+fn init_tlsf() {
     let result = unsafe { libc::pthread_atfork(None, None, Some(post_fork_handler_in_child)) };
 
     if result != 0 {
@@ -140,18 +144,23 @@ fn init_tlsf() -> Mutex<TlsfType> {
         )
     }
 
-    let mempool_size_env: String = std::env::var("MEMPOOL_SIZE").unwrap_or_else(|error| {
-        panic!("[ERROR] [Agnocast] {}: MEMPOOL_SIZE", error);
+    let mempool_size_env: String = std::env::var("AGNOCAST_MEMPOOL_SIZE").unwrap_or_else(|error| {
+        panic!("[ERROR] [Agnocast] {}: AGNOCAST_MEMPOOL_SIZE", error);
     });
 
     let mempool_size: usize = mempool_size_env.parse::<usize>().unwrap_or_else(|error| {
-        panic!("[ERROR] [Agnocast] {}: MEMPOOL_SIZE", error);
+        panic!("[ERROR] [Agnocast] {}: AGNOCAST_MEMPOOL_SIZE", error);
     });
 
     let page_size: usize = unsafe { libc::sysconf(libc::_SC_PAGESIZE) as usize };
     let aligned_size: usize = (mempool_size + page_size - 1) & !(page_size - 1);
 
-    let mempool_ptr: *mut c_void = unsafe { initialize_agnocast(aligned_size) };
+    let version = env!("CARGO_PKG_VERSION");
+    let c_version = CString::new(version).unwrap();
+
+    let mempool_ptr: *mut c_void = unsafe {
+        initialize_agnocast(aligned_size, c_version.as_ptr(), c_version.as_bytes().len())
+    };
 
     let pool: &mut [MaybeUninit<u8>] = unsafe {
         std::slice::from_raw_parts_mut(mempool_ptr as *mut MaybeUninit<u8>, mempool_size)
@@ -163,7 +172,9 @@ fn init_tlsf() -> Mutex<TlsfType> {
     let mut tlsf: TlsfType = Tlsf::new();
     tlsf.insert_free_block(pool);
 
-    Mutex::new(tlsf)
+    if TLSF.set(Mutex::new(tlsf)).is_err() {
+        panic!("[ERROR] [Agnocast] TLSF is already initialized.");
+    }
 }
 
 fn tlsf_allocate(size: usize) -> *mut c_void {
@@ -174,10 +185,10 @@ fn tlsf_allocate(size: usize) -> *mut c_void {
         );
     });
 
-    let mut tlsf = TLSF.get_or_init(init_tlsf).lock().unwrap();
+    let mut tlsf = TLSF.get().unwrap().lock().unwrap();
 
     let ptr: std::ptr::NonNull<u8> = tlsf.allocate(layout).unwrap_or_else(|| {
-        panic!("[ERROR] [Agnocast] memory allocation failed: use larger MEMPOOL_SIZE");
+        panic!("[ERROR] [Agnocast] memory allocation failed: use larger AGNOCAST_MEMPOOL_SIZE");
     });
 
     ptr.as_ptr() as *mut c_void
@@ -191,11 +202,11 @@ fn tlsf_reallocate(ptr: std::ptr::NonNull<u8>, size: usize) -> *mut c_void {
         );
     });
 
-    let mut tlsf = TLSF.get_or_init(init_tlsf).lock().unwrap();
+    let mut tlsf = TLSF.get().unwrap().lock().unwrap();
 
     let new_ptr: std::ptr::NonNull<u8> = unsafe {
         tlsf.reallocate(ptr, layout).unwrap_or_else(|| {
-            panic!("[ERROR] [Agnocast] memory allocation failed: use larger MEMPOOL_SIZE");
+            panic!("[ERROR] [Agnocast] memory allocation failed: use larger AGNOCAST_MEMPOOL_SIZE");
         })
     };
 
@@ -203,7 +214,7 @@ fn tlsf_reallocate(ptr: std::ptr::NonNull<u8>, size: usize) -> *mut c_void {
 }
 
 fn tlsf_deallocate(ptr: std::ptr::NonNull<u8>) {
-    let mut tlsf = TLSF.get_or_init(init_tlsf).lock().unwrap();
+    let mut tlsf = TLSF.get().unwrap().lock().unwrap();
     unsafe { tlsf.deallocate(ptr, ALIGNMENT) }
 }
 
@@ -251,10 +262,7 @@ fn tlsf_deallocate_wrapped(ptr: usize) {
     tlsf_deallocate(original_start_addr_ptr);
 }
 
-thread_local! {
-    static HOOKED : Cell<bool> = const { Cell::new(false) }
-}
-
+#[cfg(not(test))]
 fn should_use_original_func() -> bool {
     if IS_FORKED_CHILD.load(Ordering::Relaxed) {
         return true;
@@ -281,10 +289,7 @@ pub unsafe extern "C" fn __libc_start_main(
     rtld_fini: unsafe extern "C" fn(),
     stack_end: *const c_void,
 ) -> c_int {
-    // Acquire the lock to initialize TLSF.
-    {
-        let _tlsf = TLSF.get_or_init(init_tlsf).lock().unwrap();
-    }
+    init_tlsf();
 
     (*ORIGINAL_LIBC_START_MAIN.get_or_init(init_original_libc_start_main))(
         main, argc, argv, init, fini, rtld_fini, stack_end,
@@ -297,16 +302,7 @@ pub extern "C" fn malloc(size: usize) -> *mut c_void {
         return unsafe { (*ORIGINAL_MALLOC.get_or_init(init_original_malloc))(size) };
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            unsafe { (*ORIGINAL_MALLOC.get_or_init(init_original_malloc))(size) }
-        } else {
-            hooked.set(true);
-            let ret: *mut c_void = tlsf_allocate_wrapped(0, size);
-            hooked.set(false);
-            ret
-        }
-    })
+    tlsf_allocate_wrapped(0, size)
 }
 
 /// # Safety
@@ -331,15 +327,11 @@ pub unsafe extern "C" fn free(ptr: *mut c_void) {
         return (*ORIGINAL_FREE.get_or_init(init_original_free))(ptr);
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() || allocated_by_original {
-            (*ORIGINAL_FREE.get_or_init(init_original_free))(ptr)
-        } else {
-            hooked.set(true);
-            tlsf_deallocate_wrapped(ptr_addr);
-            hooked.set(false);
-        }
-    });
+    if allocated_by_original {
+        (*ORIGINAL_FREE.get_or_init(init_original_free))(ptr);
+    } else {
+        tlsf_deallocate_wrapped(ptr_addr);
+    }
 }
 
 #[no_mangle]
@@ -348,19 +340,11 @@ pub extern "C" fn calloc(num: usize, size: usize) -> *mut c_void {
         return unsafe { (*ORIGINAL_CALLOC.get_or_init(init_original_calloc))(num, size) };
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            unsafe { (*ORIGINAL_CALLOC.get_or_init(init_original_calloc))(num, size) }
-        } else {
-            hooked.set(true);
-            let ret: *mut c_void = tlsf_allocate_wrapped(0, num * size);
-            unsafe {
-                std::ptr::write_bytes(ret, 0, num * size);
-            };
-            hooked.set(false);
-            ret
-        }
-    })
+    let ret: *mut c_void = tlsf_allocate_wrapped(0, num * size);
+    unsafe {
+        std::ptr::write_bytes(ret, 0, num * size);
+    }
+    ret
 }
 
 /// # Safety
@@ -388,27 +372,16 @@ pub unsafe extern "C" fn realloc(ptr: *mut c_void, new_size: usize) -> *mut c_vo
         return realloc_ret;
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            (*ORIGINAL_REALLOC.get_or_init(init_original_realloc))(ptr, new_size)
-        } else {
-            hooked.set(true);
-
-            let realloc_ret = match ptr_addr {
-                Some(addr) => {
-                    if allocated_by_original {
-                        (*ORIGINAL_REALLOC.get_or_init(init_original_realloc))(ptr, new_size)
-                    } else {
-                        tlsf_reallocate_wrapped(addr, new_size)
-                    }
-                }
-                None => tlsf_allocate_wrapped(0, new_size),
-            };
-
-            hooked.set(false);
-            realloc_ret
+    match ptr_addr {
+        Some(addr) => {
+            if allocated_by_original {
+                (*ORIGINAL_REALLOC.get_or_init(init_original_realloc))(ptr, new_size)
+            } else {
+                tlsf_reallocate_wrapped(addr, new_size)
+            }
         }
-    })
+        None => tlsf_allocate_wrapped(0, new_size),
+    }
 }
 
 #[no_mangle]
@@ -421,20 +394,8 @@ pub extern "C" fn posix_memalign(memptr: &mut *mut c_void, alignment: usize, siz
         };
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            unsafe {
-                (*ORIGINAL_POSIX_MEMALIGN.get_or_init(init_original_posix_memalign))(
-                    memptr, alignment, size,
-                )
-            }
-        } else {
-            hooked.set(true);
-            *memptr = tlsf_allocate_wrapped(alignment, size);
-            hooked.set(false);
-            0
-        }
-    })
+    *memptr = tlsf_allocate_wrapped(alignment, size);
+    0
 }
 
 #[no_mangle]
@@ -445,18 +406,7 @@ pub extern "C" fn aligned_alloc(alignment: usize, size: usize) -> *mut c_void {
         };
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            unsafe {
-                (*ORIGINAL_ALIGNED_ALLOC.get_or_init(init_original_aligned_alloc))(alignment, size)
-            }
-        } else {
-            hooked.set(true);
-            let ret = tlsf_allocate_wrapped(alignment, size);
-            hooked.set(false);
-            ret
-        }
-    })
+    tlsf_allocate_wrapped(alignment, size)
 }
 
 #[no_mangle]
@@ -467,16 +417,7 @@ pub extern "C" fn memalign(alignment: usize, size: usize) -> *mut c_void {
         };
     }
 
-    HOOKED.with(|hooked: &Cell<bool>| {
-        if hooked.get() {
-            unsafe { (*ORIGINAL_MEMALIGN.get_or_init(init_original_memalign))(alignment, size) }
-        } else {
-            hooked.set(true);
-            let ret = tlsf_allocate_wrapped(alignment, size);
-            hooked.set(false);
-            ret
-        }
-    })
+    tlsf_allocate_wrapped(alignment, size)
 }
 
 #[no_mangle]
@@ -487,4 +428,196 @@ pub extern "C" fn valloc(_size: usize) -> *mut c_void {
 #[no_mangle]
 pub extern "C" fn pvalloc(_size: usize) -> *mut c_void {
     panic!("[ERROR] [Agnocast] pvalloc is not supported");
+}
+
+#[cfg(test)]
+fn init_tlsf() {
+    let mempool_size: usize = 1024 * 1024;
+    let mempool_ptr: *mut c_void = 0x121000000000 as *mut c_void;
+    let pool: &mut [MaybeUninit<u8>] = unsafe {
+        std::slice::from_raw_parts_mut(mempool_ptr as *mut MaybeUninit<u8>, mempool_size)
+    };
+
+    let shm_fd = unsafe {
+        libc::shm_open(
+            CStr::from_bytes_with_nul(b"/agnocast_test\0")
+                .unwrap()
+                .as_ptr(),
+            libc::O_CREAT | libc::O_RDWR,
+            0o600,
+        )
+    };
+
+    unsafe { libc::ftruncate(shm_fd, mempool_size as libc::off_t) };
+
+    let mmap_ptr = unsafe {
+        libc::mmap(
+            mempool_ptr,
+            mempool_size,
+            libc::PROT_READ | libc::PROT_WRITE,
+            libc::MAP_SHARED | libc::MAP_FIXED_NOREPLACE,
+            shm_fd,
+            0,
+        )
+    };
+
+    unsafe {
+        libc::shm_unlink(
+            CStr::from_bytes_with_nul(b"/agnocast_test\0")
+                .unwrap()
+                .as_ptr(),
+        )
+    };
+
+    MEMPOOL_START.store(mmap_ptr as usize, Ordering::Relaxed);
+    MEMPOOL_END.store(mmap_ptr as usize + mempool_size, Ordering::Relaxed);
+
+    let mut tlsf: TlsfType = Tlsf::new();
+    tlsf.insert_free_block(pool);
+
+    TLSF.set(Mutex::new(tlsf));
+}
+
+#[cfg(test)]
+fn should_use_original_func() -> bool {
+    false
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_malloc_normal() {
+        // Arrange
+        let start = MEMPOOL_START.load(Ordering::SeqCst);
+        let end = MEMPOOL_END.load(Ordering::SeqCst);
+        let malloc_size = 1024;
+
+        // Act
+        let ptr = malloc(malloc_size);
+
+        // Assert
+        assert!(!ptr.is_null(), "allocated memory should not be null");
+        assert!(
+            ptr as usize >= start,
+            "allocated memory should be within pool bounds"
+        );
+        assert!(
+            ptr as usize + malloc_size <= end,
+            "allocated memory should be within pool bounds"
+        );
+
+        unsafe { free(ptr) };
+    }
+
+    #[test]
+    fn test_calloc_normal() {
+        // Arrange
+        let start = MEMPOOL_START.load(Ordering::SeqCst);
+        let end = MEMPOOL_END.load(Ordering::SeqCst);
+        let elements = 4;
+        let element_size = 256;
+        let calloc_size = elements * element_size;
+
+        // Act
+        let ptr = calloc(elements, element_size);
+
+        // Assert
+        assert!(!ptr.is_null(), "calloc must not return NULL");
+        assert!(
+            ptr as usize >= start,
+            "calloc returned memory below the memory pool start address"
+        );
+        assert!(
+            ptr as usize + calloc_size <= end,
+            "calloc allocated memory exceeds the memory pool end address"
+        );
+
+        unsafe {
+            for i in 0..calloc_size {
+                let byte = *((ptr as *const u8).add(i));
+                assert_eq!(byte, 0, "memory should be zero-initialized");
+            }
+        }
+
+        unsafe { free(ptr) };
+    }
+
+    #[test]
+    fn test_realloc_normal() {
+        // Arrange
+        let start = MEMPOOL_START.load(Ordering::SeqCst);
+        let end = MEMPOOL_END.load(Ordering::SeqCst);
+        let malloc_size = 512;
+        let realloc_size = 1024;
+
+        let ptr = malloc(malloc_size);
+        assert!(!ptr.is_null(), "allocated memory should not be null");
+
+        unsafe {
+            for i in 0..malloc_size {
+                *((ptr as *mut u8).add(i)) = (i % 255) as u8;
+            }
+        }
+
+        // Act
+        let new_ptr = unsafe { realloc(ptr, realloc_size) };
+
+        // Assert
+        assert!(!new_ptr.is_null(), "realloc must not return NULL");
+        assert!(
+            new_ptr as usize >= start,
+            "realloc returned memory below the memory pool start address"
+        );
+        assert!(
+            new_ptr as usize + realloc_size <= end,
+            "realloc allocated memory exceeds the memory pool end address"
+        );
+
+        unsafe {
+            for i in 0..malloc_size {
+                assert_eq!(
+                    *((new_ptr as *const u8).add(i)),
+                    (i % 255) as u8,
+                    "realloc should preserve original data"
+                );
+            }
+        }
+
+        unsafe { free(new_ptr) };
+    }
+
+    #[test]
+    fn test_posix_memalign_normal() {
+        // Arrange
+        let start = MEMPOOL_START.load(Ordering::SeqCst);
+        let end = MEMPOOL_END.load(Ordering::SeqCst);
+        let alignment = 64;
+        let size = 512;
+        let mut ptr: *mut c_void = std::ptr::null_mut();
+
+        // Act
+        let r = posix_memalign(&mut ptr, alignment, size);
+
+        // Assert
+        assert_eq!(r, 0, "posix_memalign should return 0 on success");
+
+        assert!(!ptr.is_null(), "posix_memalign must not return NULL");
+        assert!(
+            ptr as usize >= start,
+            "posix_memalign returned memory below the memory pool start address"
+        );
+        assert!(
+            ptr as usize + size <= end,
+            "posix_memalign allocated memory exceeds the memory pool end address"
+        );
+        assert_eq!(
+            ptr as usize % alignment,
+            0,
+            "posix_memalign memory should be aligned to the specified boundary"
+        );
+
+        unsafe { free(ptr) };
+    }
 }

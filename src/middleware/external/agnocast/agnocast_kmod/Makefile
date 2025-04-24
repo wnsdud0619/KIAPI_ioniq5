@@ -1,4 +1,5 @@
-ccflags-y += -Wall -Werror
+VERSION := $(shell cat $(src)/version.txt 2>/dev/null || echo "unknown")
+ccflags-y += -Wall -Werror -DVERSION='"$(VERSION)"'
 
 ifneq ($(KUNIT_BUILD),y)
   obj-m := agnocast.o
@@ -7,15 +8,16 @@ else
   ifeq ($(CONFIG_KUNIT)$(CONFIG_GCOV_KERNEL),yy)
     obj-m := agnocast_kunit.o
 	agnocast_kunit-objs := agnocast_kunit_main.o agnocast_main.o agnocast_memory_allocator.o\
-	  agnocast_kunit/agnocast_kunit_subscriber_add.o \
-	  agnocast_kunit/agnocast_kunit_publisher_add.o \
+	  agnocast_kunit/agnocast_kunit_add_process.o \
+	  agnocast_kunit/agnocast_kunit_add_subscriber.o \
+	  agnocast_kunit/agnocast_kunit_add_publisher.o \
 	  agnocast_kunit/agnocast_kunit_increment_rc.o \
 	  agnocast_kunit/agnocast_kunit_decrement_rc.o \
-	  agnocast_kunit/agnocast_kunit_receive_msg.o \
 	  agnocast_kunit/agnocast_kunit_publish_msg.o \
+	  agnocast_kunit/agnocast_kunit_receive_msg.o \
 	  agnocast_kunit/agnocast_kunit_take_msg.o \
-	  agnocast_kunit/agnocast_kunit_new_shm.o \
-	  agnocast_kunit/agnocast_kunit_get_subscriber_num.o
+	  agnocast_kunit/agnocast_kunit_get_subscriber_num.o \
+	  agnocast_kunit/agnocast_kunit_do_exit.o
 	ccflags-y += -DKUNIT_BUILD -fprofile-arcs -ftest-coverage
   else
     $(warning "CONFIG_KUNIT or CONFIG_GCOV_KERNEL is not set")

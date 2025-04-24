@@ -4,11 +4,6 @@
 
 MODULE_LICENSE("Dual BSD/GPL");
 
-#define MEMPOOL_128MB_NUM 1000
-#define MEMPOOL_1GB_NUM 100
-#define MEMPOOL_8GB_NUM 10
-#define MEMPOOL_TOTAL_NUM (MEMPOOL_128MB_NUM + MEMPOOL_1GB_NUM + MEMPOOL_8GB_NUM)
-
 static const uint64_t MEMPOOL_128MB_SIZE = 134217728;  // 128 * 1024 * 1024
 static const uint64_t MEMPOOL_1GB_SIZE = 1073741824;   // 1 * 1024 * 1024 * 1024
 static const uint64_t MEMPOOL_8GB_SIZE = 8589934592;   // 8 * 1024 * 1024 * 1024
@@ -17,7 +12,7 @@ static struct mempool_entry mempool_entries[MEMPOOL_TOTAL_NUM];
 
 void init_memory_allocator(void)
 {
-  // TODO(Ryuta Kambe): we assume that the address from 0x40000000000 to 0x8B000000000 is available
+  // TODO(Ryuta Kambe): we assume that the address from 0x40000000000 to 0x120FFFFFFFFF is available
   uint64_t addr = 0x40000000000;
 
   for (int i = 0; i < MEMPOOL_128MB_NUM; i++) {

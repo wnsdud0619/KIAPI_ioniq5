@@ -46,7 +46,7 @@ def calc_action_delays(config: dict) -> tuple:
     unit_delay = 1.0
     pub_delay = 0.0 if config['launch_pub_before_sub'] else unit_delay
     sub_delay = 0.01 * EXPECT_INIT_PUB_NUM + unit_delay if config['launch_pub_before_sub'] else 0.0
-    ready_delay = float(TIMEOUT) if TIMEOUT else pub_delay + sub_delay + 7.0
+    ready_delay = float(TIMEOUT) if TIMEOUT else pub_delay + sub_delay + 10.0
     return pub_delay, sub_delay, ready_delay
 
 
@@ -83,7 +83,7 @@ def generate_test_description():
                 output='screen',
                 additional_env={
                     'LD_PRELOAD': f"libagnocast_heaphook.so:{os.getenv('LD_PRELOAD', '')}",
-                    'MEMPOOL_SIZE': '134217728',
+                    'AGNOCAST_MEMPOOL_SIZE': '134217728',
                 }
             )
         ]
@@ -138,7 +138,7 @@ def generate_test_description():
                 output='screen',
                 additional_env={
                     'LD_PRELOAD': f"libagnocast_heaphook.so:{os.getenv('LD_PRELOAD', '')}",
-                    'MEMPOOL_SIZE': '134217728',
+                    'AGNOCAST_MEMPOOL_SIZE': '134217728',
                 }
             )
         )
@@ -167,7 +167,7 @@ def generate_test_description():
                 output='screen',
                 additional_env={
                     'LD_PRELOAD': f"libagnocast_heaphook.so:{os.getenv('LD_PRELOAD', '')}",
-                    'MEMPOOL_SIZE': '134217728',
+                    'AGNOCAST_MEMPOOL_SIZE': '134217728',
                 }
             )
         )

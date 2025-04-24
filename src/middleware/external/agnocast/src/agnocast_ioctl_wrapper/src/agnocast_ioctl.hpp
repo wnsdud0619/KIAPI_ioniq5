@@ -12,6 +12,12 @@
 #define TOPIC_NAME_BUFFER_SIZE 256
 #define NODE_NAME_BUFFER_SIZE 256
 
+struct name_info
+{
+  const char * ptr;
+  uint64_t len;
+};
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wpedantic"
 union ioctl_topic_list_args {
@@ -22,7 +28,7 @@ union ioctl_topic_list_args {
 union ioctl_node_info_args {
   struct
   {
-    const char * node_name;
+    struct name_info node_name;
     uint64_t topic_name_buffer_addr;
   };
   uint32_t ret_topic_num;
@@ -38,15 +44,15 @@ struct topic_info_ret
 union ioctl_topic_info_args {
   struct
   {
-    const char * topic_name;
+    struct name_info topic_name;
     uint64_t topic_info_ret_buffer_addr;
   };
   uint32_t ret_topic_info_ret_num;
 };
 #pragma GCC diagnostic pop
 
-#define AGNOCAST_GET_TOPIC_LIST_CMD _IOR('R', 1, union ioctl_topic_list_args)
-#define AGNOCAST_GET_TOPIC_SUBSCRIBER_INFO_CMD _IOR('R', 2, union ioctl_topic_info_args)
-#define AGNOCAST_GET_TOPIC_PUBLISHER_INFO_CMD _IOR('R', 3, union ioctl_topic_info_args)
-#define AGNOCAST_GET_NODE_SUBSCRIBER_TOPICS_CMD _IOR('R', 4, union ioctl_node_info_args)
-#define AGNOCAST_GET_NODE_PUBLISHER_TOPICS_CMD _IOR('R', 5, union ioctl_node_info_args)
+#define AGNOCAST_GET_TOPIC_LIST_CMD _IOWR(0xA6, 20, union ioctl_topic_list_args)
+#define AGNOCAST_GET_TOPIC_SUBSCRIBER_INFO_CMD _IOWR(0xA6, 21, union ioctl_topic_info_args)
+#define AGNOCAST_GET_TOPIC_PUBLISHER_INFO_CMD _IOWR(0xA6, 22, union ioctl_topic_info_args)
+#define AGNOCAST_GET_NODE_SUBSCRIBER_TOPICS_CMD _IOWR(0xA6, 23, union ioctl_node_info_args)
+#define AGNOCAST_GET_NODE_PUBLISHER_TOPICS_CMD _IOWR(0xA6, 24, union ioctl_node_info_args)
