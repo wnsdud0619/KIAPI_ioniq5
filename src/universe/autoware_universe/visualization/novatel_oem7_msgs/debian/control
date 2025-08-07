@@ -1,0 +1,12 @@
+Source: ros-humble-novatel-oem7-msgs
+Section: misc
+Priority: optional
+Maintainer: NovAtel Support <support.novatel@hexagon.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-rosidl-default-generators, ros-humble-std-msgs
+Homepage: http://www.novatel.com
+Standards-Version: 3.9.2
+
+Package: ros-humble-novatel-oem7-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-rosidl-default-runtime, ros-humble-std-msgs
+Description: Messages for NovAtel Oem7 family of receivers.

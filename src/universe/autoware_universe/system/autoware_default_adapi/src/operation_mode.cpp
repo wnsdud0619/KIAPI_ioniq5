@@ -56,9 +56,9 @@ OperationModeNode::OperationModeNode(const rclcpp::NodeOptions & options)
   prev_state_.mode = OperationModeState::Message::UNKNOWN;
   mode_available_[OperationModeState::Message::UNKNOWN] = false;
   mode_available_[OperationModeState::Message::STOP] = true;
-  mode_available_[OperationModeState::Message::AUTONOMOUS] = false;
-  mode_available_[OperationModeState::Message::LOCAL] = false;
-  mode_available_[OperationModeState::Message::REMOTE] = false;
+  mode_available_[OperationModeState::Message::AUTONOMOUS] = true;
+  mode_available_[OperationModeState::Message::LOCAL] = true;
+  mode_available_[OperationModeState::Message::REMOTE] = true;
 }
 
 template <class ResponseT>

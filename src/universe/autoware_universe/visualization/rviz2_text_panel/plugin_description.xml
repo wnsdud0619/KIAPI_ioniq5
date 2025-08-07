@@ -1,0 +1,7 @@
+<library path="rviz2_text_panel">
+  <class name="rviz_text_panel::TextPanel"
+       type="rviz_text_panel::TextPanel"
+       base_class_type="rviz_common::Panel">
+    <description>Simple Text Panel</description>
+  </class>
+</library>

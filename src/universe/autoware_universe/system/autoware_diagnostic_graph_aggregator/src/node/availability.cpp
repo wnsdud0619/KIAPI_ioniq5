@@ -62,7 +62,9 @@ void ModesAvailability::update(const rclcpp::Time & stamp) const
   Availability message;
   message.stamp            = stamp;
   message.stop             = is_ok(stop_mode_);
-  message.autonomous       = is_ok(autonomous_mode_);
+  //message.autonomous       = is_ok(autonomous_mode_);
+  //jy add
+  message.autonomous       = true;
   message.local            = is_ok(local_mode_);
   message.remote           = is_ok(remote_mode_);
   message.emergency_stop   = is_ok(emergency_stop_mrm_);

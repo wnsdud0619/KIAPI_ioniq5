@@ -14,13 +14,13 @@
   <!-- Optional parameters -->
   <!-- Modules to be launched -->
   <arg name="vehicle" default="true" description="launch vehicle"/>
-  <arg name="system" default="false" description="launch system"/>
+  <arg name="system" default="true" description="launch system"/>
   <arg name="map" default="true" description="launch map"/>
   <arg name="sensing" default="true" description="launch sensing"/>
   <arg name="localization" default="true" description="launch localization"/>
   <arg name="perception" default="true" description="launch perception"/>
-  <arg name="planning" default="false" description="launch planning"/>
-  <arg name="control" default="false" description="launch control"/>
+  <arg name="planning" default="true" description="launch planning"/>
+  <arg name="control" default="true" description="launch control"/>
   <!-- Pointcloud container -->
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
   <!-- Vehicle -->
@@ -42,6 +42,7 @@
       <arg name="map_path" value="$(var map_path)"/>
       <arg name="vehicle_model" value="$(var vehicle_model)"/>
       <arg name="sensor_model" value="$(var sensor_model)"/>
+      <arg name="data_path" value="$(var data_path)"/>
       <!-- launch module preset -->
       <arg name="planning_module_preset" value="$(var planning_module_preset)"/>
       <arg name="control_module_preset" value="$(var control_module_preset)"/>

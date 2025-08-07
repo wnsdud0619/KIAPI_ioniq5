@@ -9,4 +9,4 @@
 
 /adapi/node/vehicle_door:
   ros__parameters:
-    check_autoware_control: true
+    check_autoware_control: false

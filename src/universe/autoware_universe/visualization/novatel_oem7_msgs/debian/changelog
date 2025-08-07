@@ -1,0 +1,21 @@
+ros-humble-novatel-oem7-msgs (20.6.0-0jammy) jammy; urgency=high
+
+  Various QoL changes
+  * BESTGNSSVEL, INSPVASX Oem7 Messages
+
+ -- NovAtel Support <support.novatel@hexagon.com>  Wed, 29 Jan 2025 15:00:00 -0000
+
+ros-humble-novatel-oem7-msgs (20.0.0-0jammy) jammy; urgency=high
+
+  Formal support for Humble; functionality updated to that of ROS1 v4.2.0
+  * BESTGNSSPOS, PPPPOS, TERRASTARINFO, TERRASTARSTATUS Oem7 Messages
+
+ -- NovAtel Support <support.novatel@hexagon.com>  Mon, 17 Apr 2023 15:00:00 -0000
+
+ros-humble-novatel-oem7-msgs (10.0.0-0jammy) jammy; urgency=high
+
+  Initial Support for ROS2/Foxy
+
+ -- NovAtel Support <support.novatel@hexagon.com>  Mon, 30 Aug 2021 15:00:00 -0000
+
+

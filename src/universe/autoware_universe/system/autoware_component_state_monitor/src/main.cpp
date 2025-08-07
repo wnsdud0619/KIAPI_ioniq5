@@ -91,6 +91,8 @@ StateMonitor::StateMonitor(const rclcpp::NodeOptions & options) : Node("state", 
 
 void StateMonitor::update_state(const StateType & type, const Module & module, bool state)
 {
+  //jy add
+  state = true;
   if (states_[type].count(module) == 0 || states_[type][module] != state) {
     ModeChangeAvailable msg;
     msg.stamp = now();

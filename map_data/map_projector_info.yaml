@@ -1,7 +1,17 @@
+#projector_type: MGRS
+#vertical_datum: WGS84
+#mgrs_grid: 52SDE
+
+#projector_type: LocalCartesianUTM
+#vertical_datum: WGS84
+#map_origin:
+#  latitude: 35.648235 # [deg]
+#  longitude: 128.399072 # [deg]
+#  altitude: 0.0 # [m]
+  
 projector_type: LocalCartesianUTM
 vertical_datum: WGS84
 map_origin:
-  latitude: 35.648235
-  longitude: 128.399072
-  altitude: 0.0
-
+  latitude: 35.6470846 # [deg]
+  longitude: 128.4019872 # [deg]
+  altitude: 0.0 # [m]
