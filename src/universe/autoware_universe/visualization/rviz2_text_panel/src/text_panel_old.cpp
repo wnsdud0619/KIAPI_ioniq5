@@ -4,7 +4,6 @@
 #include <QVBoxLayout>
 #include <QTimer>
 #include <QMetaObject>
-#include <map>
 #include "novatel_oem7_msgs/msg/bestpos.hpp"
 
 namespace rviz_text_panel
@@ -31,44 +30,46 @@ public:
     subscription_ = node_->create_subscription<novatel_oem7_msgs::msg::BESTPOS>(
       "/novatel/oem7/bestpos", 10,
       [this](novatel_oem7_msgs::msg::BESTPOS::UniquePtr msg) {
+        // Qt 메인스레드에서 updateStatus 호출
         QMetaObject::invokeMethod(this, "updateStatus",
             Qt::QueuedConnection,
             Q_ARG(uint32_t, msg->pos_type.type));
       });
 
+    // 타이머로 rclcpp spin_some 호출 (ROS 메시지 콜백 처리용)
     timer_ = new QTimer(this);
     connect(timer_, &QTimer::timeout, this, &TextPanel::spinOnce);
     timer_->start(50);  // 20Hz
-
-    initGpsStatusMap();
   }
 
 public Q_SLOTS:
-  void updateStatus(uint32_t pos_type)
-  {
-    QString status;
-    QString color;
+void updateStatus(uint32_t pos_type)
+{
+  QString status;
+  QString color;
 
-    auto it = gps_status_map_.find(pos_type);
-    if (it != gps_status_map_.end()) {
-      status = QString::fromStdString(it->second);
-    } else {
-      status = "unknown";
-    }
-
-    if (status == "fail") {
-      color = "red";
-    } else if (status == "single_gps") {
-      color = "#90EE90"; // LightGreen
-    } else if (status == "rtk_gps") {
-      color = "green";
-    } else {
-      color = "yellow";
-    }
-
-    label_->setText("GPS 상태: " + status.toUpper());
-    label_->setStyleSheet(QString("QLabel { color : %1; }").arg(color));
+  if (pos_type == 0) {
+    status = "FAIL";
+    color = "red";  // 빨간색
   }
+  else if (pos_type >= 16 && pos_type <= 20) {
+    status = "SINGLE";
+    color = "#90EE90";  // 연한 초록 (LightGreen)
+  }
+  else if (pos_type >= 32) {
+    status = "RTK";
+    color = "green";  // 초록색
+  }
+  else {
+    status = "UNKNOWN";
+    color = "yellow";  // 노란색
+  }
+
+  label_->setText("GPS 상태: " + status);
+
+  // 텍스트 색상 변경 (스타일 시트 적용)
+  label_->setStyleSheet(QString("QLabel { color : %1; }").arg(color));
+}
 
 private Q_SLOTS:
   void spinOnce()
@@ -77,30 +78,10 @@ private Q_SLOTS:
   }
 
 private:
-  void initGpsStatusMap()
-  {
-    gps_status_map_ = {
-      // unknown
-      {0,"unknown"},{8,"unknown"},{19,"unknown"},{67,"unknown"},
-      {68,"unknown"},{73,"unknown"},{77,"unknown"},{79,"unknown"},
-      // single_gps
-      {1,"single_gps"},{2,"single_gps"},{16,"single_gps"},{17,"single_gps"},
-      {52,"single_gps"},{53,"single_gps"},{54,"single_gps"},{70,"single_gps"},
-      // rtk_gps
-      {32,"rtk_gps"},{34,"rtk_gps"},{48,"rtk_gps"},{49,"rtk_gps"},
-      {50,"rtk_gps"},{55,"rtk_gps"},{56,"rtk_gps"},{69,"rtk_gps"},
-      {74,"rtk_gps"},{78,"rtk_gps"},{80,"rtk_gps"},
-      // fail
-      {71,"fail"},{72,"fail"}
-    };
-  }
-
-private:
   QLabel* label_;
   rclcpp::Node::SharedPtr node_;
   rclcpp::Subscription<novatel_oem7_msgs::msg::BESTPOS>::SharedPtr subscription_;
   QTimer* timer_;
-  std::map<uint32_t, std::string> gps_status_map_;
 };
 
 }  // namespace rviz_text_panel
