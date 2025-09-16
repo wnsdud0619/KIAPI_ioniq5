@@ -2,7 +2,7 @@
 <launch>
   <!-- NOTE: optional parameters are written here -->
   <arg name="module_preset" default="default"/>
-  <arg name="enable_all_modules_auto_mode" default="false"/>
+  <arg name="enable_all_modules_auto_mode" default="true"/>
   <arg name="is_simulation" default="false"/>
   <include file="$(find-pkg-share autoware_launch)/config/planning/preset/$(var module_preset)_preset.yaml"/>
 

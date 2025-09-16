@@ -26,4 +26,4 @@ sensor_kit_base_link:
     z: 0.8
     roll: 0.0
     pitch: 0.0
-    yaw: 1.57
+    yaw: -1.5533467 #0.0174533rad = 1deg, 1.5708

@@ -1,0 +1,12 @@
+# ControlMessage1.msg
+std_msgs/Header header
+bool eps_en
+bool controlsw
+int8 eps_interval
+bool scc_en
+bool aeb_act
+int8 aeb_decel_value
+bool turn_sig_hazard
+bool turn_sig_l
+bool turn_sig_r
+bool accel_override_switch

@@ -39,26 +39,27 @@ public:
 
 
         report_pub_ = this->create_publisher<autoware_vehicle_msgs::msg::VelocityReport>("/vehicle/status/velocity_status", 10);
-        corrimu_sub_ = this->create_subscription<novatel_oem7_msgs::msg::CORRIMU>(
-            "/novatel/oem7/corrimu", 10,
-            [this](novatel_oem7_msgs::msg::CORRIMU::SharedPtr msg) {
-                publishVelocityReport(vel_data_.hor_speed, msg->yaw_rate);
-            });
         vel_sub_ = this->create_subscription<novatel_oem7_msgs::msg::BESTVEL>(
             "/novatel/oem7/bestvel", 10,
             [this](novatel_oem7_msgs::msg::BESTVEL::SharedPtr msg) {
                 vel_data_ = *msg;
             });
+        corrimu_sub_ = this->create_subscription<novatel_oem7_msgs::msg::CORRIMU>(
+            "/novatel/oem7/corrimu", 10,
+            [this](novatel_oem7_msgs::msg::CORRIMU::SharedPtr msg) {
+                publishVelocityReport(vel_data_.hor_speed, vel_data_.ver_speed, msg->yaw_rate);
+            });
+
     }
 
 private:
-    void publishVelocityReport(float longitudinal_velocity, float heading_rate)
+    void publishVelocityReport(float longitudinal_velocity, float lateral_velocity, float heading_rate)
     {
         autoware_vehicle_msgs::msg::VelocityReport report;
         report.header.stamp = vel_data_.header.stamp;
         report.header.frame_id = "base_link";
         report.longitudinal_velocity = longitudinal_velocity;
-        report.lateral_velocity = 0.0;
+        report.lateral_velocity = lateral_velocity;
         report.heading_rate = heading_rate;
 
         report_pub_->publish(report);

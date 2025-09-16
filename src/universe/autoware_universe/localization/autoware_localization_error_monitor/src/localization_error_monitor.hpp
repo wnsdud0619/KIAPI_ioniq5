@@ -49,6 +49,9 @@ private:
   autoware::localization_util::Ellipse ellipse_;
 
   void on_odom(nav_msgs::msg::Odometry::ConstSharedPtr input_msg);
+  rclcpp::TimerBase::SharedPtr diagnostics_timer_;
+  void publish_ok_diagnostics();
+  
 
 public:
   explicit LocalizationErrorMonitor(const rclcpp::NodeOptions & options);

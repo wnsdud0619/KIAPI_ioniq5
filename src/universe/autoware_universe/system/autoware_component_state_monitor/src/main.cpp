@@ -96,7 +96,8 @@ void StateMonitor::update_state(const StateType & type, const Module & module, b
   if (states_[type].count(module) == 0 || states_[type][module] != state) {
     ModeChangeAvailable msg;
     msg.stamp = now();
-    msg.available = state;
+    //msg.available = state;
+    msg.available = true;
     pubs_[type][module]->publish(msg);
   }
   states_[type][module] = state;

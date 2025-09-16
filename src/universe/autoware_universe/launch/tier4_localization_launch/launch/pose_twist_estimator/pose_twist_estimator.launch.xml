@@ -116,9 +116,10 @@
 
     <!-- pose_initializer -->
     <let name="sub_gnss_pose_cov" value="/sensing/gnss/pose_with_covariance"/>
+    <!-- pose_initializer 
     <group if="$(var use_eagleye_pose)" scoped="false">
       <let name="sub_gnss_pose_cov" value="/localization/pose_estimator/pose_with_covariance" unless="$(var multi_localizer_mode)"/>
-    </group>
+    </group>-->
 
     <include file="$(find-pkg-share autoware_pose_initializer)/launch/pose_initializer.launch.xml">
       <arg name="user_defined_initial_pose/enable" value="$(var user_defined_initial_pose/enable)"/>

@@ -12,7 +12,10 @@
   <depend>rclcpp</depend>
   <depend>sensor_msgs</depend>
   <depend>autoware_vehicle_msgs</depend>
-  
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>gps_msgs</depend>
+  <depend>autoware_sensing_msgs</depend>
   <depend>velodyne_msgs</depend>
 
 

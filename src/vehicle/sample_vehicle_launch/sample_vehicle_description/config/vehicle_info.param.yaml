@@ -9,4 +9,4 @@
     left_overhang: 0.126 # between left wheel center and vehicle left (ioniq5)
     right_overhang: 0.126 # between right wheel center and vehicle right (ioniq5)
     vehicle_height: 1.65 #(ioniq5)
-    max_steer_angle: 0.70 # [rad]
+    max_steer_angle: 0.7 # [rad]

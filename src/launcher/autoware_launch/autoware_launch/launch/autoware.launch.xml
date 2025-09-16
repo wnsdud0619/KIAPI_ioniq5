@@ -89,12 +89,18 @@
   <!-- Sensing -->
   <group if="$(var launch_sensing)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_sensing_component.launch.xml"/>
+    <include file="$(find-pkg-share autoware_convert_topic)/launch/convert.launch.py"/>
+    <node pkg="orientation_pub" exec="gps_imu_sync_node" name="gps_imu_sync" output="screen"/>
   </group>
 
   <!-- Localization -->
   <group if="$(var launch_localization)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_localization_component.launch.xml"/>
   </group>
+
+  <!-- GPS ONLY Localization, launch_localization == false -->
+  <node pkg="kiapi_sensor_kit_launch" exec="gnss_to_link" name="gnss_to_link" output="screen" unless="$(var launch_localization)"/>
+  <node pkg="fake_localization_pkg" exec="fake_localization_node" name="fake_localization" output="screen" unless="$(var launch_localization)"/>
 
   <!-- Perception -->
   <group if="$(var launch_perception)">
@@ -115,8 +121,16 @@
   <!-- Control -->
   <group if="$(var launch_control)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_control_component.launch.xml">
-      <arg name="module_preset" value="$(var control_module_preset)"/>
+      <arg name="module_preset" value="$(var control_module_preset)"/>      
     </include>
+    <!-- CAN데이터 받아서 pub -->
+    <node pkg="ioniq5_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>
+    <!-- QT ROS2 Interface Node -->
+    <node pkg="qt_ros2_interface" exec="qt_ros2_node" name="qt_ros2_interface" output="screen"/>
+    <!-- Control Command Converter Node  -->
+    <node pkg="control_cmd_converter" exec="control_cmd_converter" name="control_cmd_converter" output="screen"/>
+    <!-- CAN Publisher Node -->
+    <node pkg="ros_can_write_py" exec="can_publisher" name="can_publisher" output="screen"/>
   </group>
 
   <!-- API -->

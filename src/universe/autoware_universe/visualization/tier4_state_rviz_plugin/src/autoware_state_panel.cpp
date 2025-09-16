@@ -585,7 +585,7 @@ void AutowareStatePanel::onLocalization(const LocalizationInitializationState::C
 {
   IconState state;
   QColor bgColor;
-  QString localization_state = "Localization | Unknown";
+  QString localization_state = "Localization | Initialized";
 
   switch (msg->state) {
     case LocalizationInitializationState::UNINITIALIZED:

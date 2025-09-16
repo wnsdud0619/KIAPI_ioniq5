@@ -12,6 +12,11 @@ find_package(sensor_msgs REQUIRED)
 find_package(velodyne_msgs REQUIRED)
 find_package(novatel_oem7_msgs REQUIRED)
 find_package(autoware_vehicle_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(gps_msgs REQUIRED)
+find_package(autoware_sensing_msgs REQUIRED)
+find_package(message_filters REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -19,7 +24,7 @@ find_package(autoware_vehicle_msgs REQUIRED)
 
 add_executable(autoware_convert_topic src/convert_node.cpp)
 
-ament_target_dependencies(autoware_convert_topic rclcpp sensor_msgs velodyne_msgs novatel_oem7_msgs autoware_vehicle_msgs )
+ament_target_dependencies(autoware_convert_topic rclcpp sensor_msgs velodyne_msgs novatel_oem7_msgs autoware_vehicle_msgs gps_msgs autoware_sensing_msgs message_filters )
 
 install(TARGETS autoware_convert_topic DESTINATION lib/${PROJECT_NAME})
 install(DIRECTORY launch

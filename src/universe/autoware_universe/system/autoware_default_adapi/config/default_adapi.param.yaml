@@ -1,6 +1,7 @@
 /adapi/node/autoware_state:
   ros__parameters:
     update_rate: 10.0
+    publish_operation_mode_state: true
 
 /adapi/node/motion:
   ros__parameters:
