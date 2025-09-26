@@ -52,12 +52,12 @@ class ControlCmdConverter(Node):
         self.publisher.publish(kiapi_msg)
 
         # 로그 출력
-        #self.get_logger().info(
-        #    f"tire_angle: {tire_angle_rad:.3f} rad "
-        #    f"({tire_angle_deg:.2f}°) → "
-        #    f"steering_wheel: {steering_wheel_deg:.2f}°, "
-        #    f"acceleration: {acc_cmd:.2f} m/s²"
-        #)
+        self.get_logger().info(
+            f"tire_angle: {tire_angle_rad:.3f} rad "
+            f"({tire_angle_deg:.2f}°) → "
+            f"steering_wheel: {steering_wheel_deg:.2f}°, "
+            f"acceleration: {acc_cmd:.2f} m/s²"
+        )
 
 
 def main(args=None):

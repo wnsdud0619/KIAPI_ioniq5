@@ -63,8 +63,8 @@ private:
         report.heading_rate = heading_rate;
 
         report_pub_->publish(report);
-        RCLCPP_INFO(this->get_logger(), "Published Velocity Report: Longitudinal = %f, Lateral = %f, Heading Rate = %f",
-                    report.longitudinal_velocity, report.lateral_velocity, report.heading_rate);
+        //RCLCPP_INFO(this->get_logger(), "Published Velocity Report: Longitudinal = %f, Lateral = %f, Heading Rate = %f",
+        //            report.longitudinal_velocity, report.lateral_velocity, report.heading_rate);
     }
 
     rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_pub_;
