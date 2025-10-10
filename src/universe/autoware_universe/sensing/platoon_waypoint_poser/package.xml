@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>platoon_waypoint_poser</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="kjyangks@naver.com">kiapi</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+  
+  <build_depend>libboost-dev</build_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>autoware_map_msgs</depend>
+  <depend>autoware_geography_utils</depend>
+  <depend>geographic_msgs</depend>
+  <depend>geographiclib</depend>
+  <depend>visualization_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>kiapi_waypoints_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

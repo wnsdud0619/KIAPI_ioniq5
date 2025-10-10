@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>kiapi_waypoints_msgs</name>
+  <version>0.0.1</version>
+  <description>Custom KIAPI message definitions</description>
+  <maintainer email="kjyangks@naver.com">kiapi</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <depend>builtin_interfaces</depend>
+  <depend>std_msgs</depend> <!-- ✅ 추가 -->
+  <depend>geographic_msgs</depend>
+  <depend>rosidl_default_generators</depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Interface group -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
