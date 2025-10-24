@@ -748,10 +748,30 @@ void NDTScanMatcher::publish_pose(
   result_pose_stamped_msg.header.frame_id = param_.frame.map_frame;
   result_pose_stamped_msg.pose = result_pose_msg;
 
+  // JY 수정
+  geometry_msgs::msg::Pose corrected_pose = result_pose_msg;
+  tf2::Quaternion q(
+    corrected_pose.orientation.x,
+    corrected_pose.orientation.y,
+    corrected_pose.orientation.z,
+    corrected_pose.orientation.w);
+  double roll, pitch, yaw;
+  tf2::Matrix3x3(q).getRPY(roll, pitch, yaw);
+
+  double offset_y = -0.3;  // 오른쪽으로 0.5m 이동
+  double dx = -offset_y * std::sin(yaw);
+  double dy =  offset_y * std::cos(yaw);
+
+  corrected_pose.position.x += dx;
+  corrected_pose.position.y += dy;
+  //JY
+ 
+
   geometry_msgs::msg::PoseWithCovarianceStamped result_pose_with_cov_msg;
   result_pose_with_cov_msg.header.stamp = sensor_ros_time;
   result_pose_with_cov_msg.header.frame_id = param_.frame.map_frame;
-  result_pose_with_cov_msg.pose.pose = result_pose_msg;
+  //result_pose_with_cov_msg.pose.pose = result_pose_msg;  //origin
+  result_pose_with_cov_msg.pose.pose = corrected_pose;     //JY
   result_pose_with_cov_msg.pose.covariance = ndt_covariance;
 
   if (is_converged) {
