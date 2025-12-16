@@ -27,6 +27,7 @@ class FakeLocalizationNode(Node):
         self.pub_state = self.create_publisher(LocalizationInitializationState, '/localization/initialization_state', qos)
         self.pub_pose = self.create_publisher(PoseStamped, '/localization/pose_twist_fusion_filter/pose', qos)
         self.pub_twist = self.create_publisher(TwistStamped, '/localization/pose_twist_fusion_filter/twist', qos)
+        self.pub_vehicle_twist = self.create_publisher(TwistStamped, '/vehicle/status/twist', qos)   # ✅ 추가
         self.pub_diag = self.create_publisher(DiagnosticArray, '/diagnostics', 10)
         self.pub_kinematic_state = self.create_publisher(Odometry, '/localization/kinematic_state', qos)
         self.pub_accel = self.create_publisher(AccelWithCovarianceStamped, '/localization/acceleration', qos)
@@ -69,7 +70,6 @@ class FakeLocalizationNode(Node):
             qw = transform.transform.rotation.w
         except TransformException as ex:
             self.get_logger().warn(f'Could not transform map->base_link: {ex}')
-            # TF 없으면 odom callback에서 종료
             return
 
         # --- PoseStamped ---
@@ -86,6 +86,7 @@ class FakeLocalizationNode(Node):
         msg_twist.header.frame_id = "base_link"
         msg_twist.twist = msg.twist.twist
         self.pub_twist.publish(msg_twist)
+        #self.pub_vehicle_twist.publish(msg_twist)   # ✅ /vehicle/status/twist 추가 퍼블리시
 
         # --- KinematicState (pose: TF, twist: odom) ---
         msg_kin = Odometry()
@@ -106,13 +107,10 @@ class FakeLocalizationNode(Node):
             accel_msg.accel.accel.linear = self.latest_imu.linear_acceleration
             accel_msg.accel.accel.angular = self.latest_imu.angular_velocity
 
-            # 6x6 covariance 구성
             cov = [0.0] * 36
-            # linear_acceleration_covariance → 0~2 행
             for i in range(3):
                 for j in range(3):
                     cov[i*6 + j] = self.latest_imu.linear_acceleration_covariance[i*3 + j]
-            # angular_velocity_covariance → 3~5 행
             for i in range(3):
                 for j in range(3):
                     cov[3*6 + i*6 + j + 3] = self.latest_imu.angular_velocity_covariance[i*3 + j]
@@ -153,3 +151,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+

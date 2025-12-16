@@ -10,6 +10,8 @@ from autoware_vehicle_msgs.msg import *
 from rclpy.clock import Clock
 from rclpy.executors import MultiThreadedExecutor
 import math
+import os
+from ament_index_python.packages import get_package_share_directory
 
 # 기어 변환 딕셔너리 (P:0, R:7, N:6, D:5)
 Gear_DISP_dict = { 
@@ -34,7 +36,9 @@ class CanReceiver(Node):
         self.bus = can.ThreadSafeBus(interface='socketcan', channel='can0')
 
         # DBC 파일 로드 및 메시지 캐싱 (속도 향상)
-        self.dbc = cantools.database.load_file('KIAPI.dbc')
+        pkg_share = get_package_share_directory('ioniq5_can_pub')
+        dbc_path = os.path.join(pkg_share, 'KIAPI.dbc')
+        self.dbc = cantools.database.load_file(dbc_path)
         self.dbc_messages = {msg.frame_id: msg for msg in self.dbc.messages}
 
         # CAN 메시지 수신 큐 (멀티스레드, 최대 크기 제한)
@@ -109,8 +113,8 @@ class CanReceiver(Node):
                 TurnIndicatorsReport_msg = TurnIndicatorsReport()
 
                 #msg에 can값 넣어서 변하도록 해야함 현재는 기본값만 넣음
-                HazardLightsReport_msg.report = 2  # DISABLE = 1, ENABLE = 2
-                TurnIndicatorsReport_msg.report = 2 # No command = 0, DISABLE = 1, ENABLE_LEFT = 2, ENABLE_RIGHT = 3
+                HazardLightsReport_msg.report = 1  # DISABLE = 1, ENABLE = 2
+                TurnIndicatorsReport_msg.report = 1 # No command = 0, DISABLE = 1, ENABLE_LEFT = 2, ENABLE_RIGHT = 3
                 HazardLightsReport_msg.stamp = header.stamp
                 TurnIndicatorsReport_msg.stamp = header.stamp
                 self.pub_HazardLightsReport.publish(HazardLightsReport_msg)

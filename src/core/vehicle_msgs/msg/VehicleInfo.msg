@@ -1,0 +1,4 @@
+uint8 vehicle_id
+vehicle_msgs/VehicleStatus vehicle_status
+vehicle_msgs/ObjectArray object_array
+

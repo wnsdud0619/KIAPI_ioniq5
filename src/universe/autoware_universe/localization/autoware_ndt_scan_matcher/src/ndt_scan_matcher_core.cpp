@@ -758,7 +758,7 @@ void NDTScanMatcher::publish_pose(
   double roll, pitch, yaw;
   tf2::Matrix3x3(q).getRPY(roll, pitch, yaw);
 
-  double offset_y = -0.3;  // 오른쪽으로 0.5m 이동
+  double offset_y = -0.15;  // 오른쪽으로 0.5m 이동 / (+) 양수면 왼쪽으로 붙음 / (-) 음수면 오른쪽으로 붙음
   double dx = -offset_y * std::sin(yaw);
   double dy =  offset_y * std::cos(yaw);
 

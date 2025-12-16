@@ -23,6 +23,8 @@
   <arg name="launch_planning" default="true" description="launch planning"/>
   <arg name="launch_control" default="true" description="launch control"/>
   <arg name="launch_api" default="true" description="launch api"/>
+  <arg name="static_TL" default="true" description="static_TL_pubilsher"/>
+
   <!-- Global parameters -->
   <arg name="use_sim_time" default="false" description="use_sim_time"/>
   <!-- Vehicle -->
@@ -81,6 +83,14 @@
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_system_component.launch.xml"/>
   </group>
 
+   <!-- System 해당 토픽들 강제 pubilsh--> 
+  <arg name="publish_motion_state" default="true"/>
+  <arg name="publish_control_mode" default="true"/>
+  <node pkg="static_vehicle_state_pub" exec="motion_control_static_pub" name="static_motion_control_publisher" output="screen">
+    <param name="publish_motion_state" value="$(var publish_motion_state)"/>
+    <param name="publish_control_mode" value="$(var publish_control_mode)"/>
+  </node>
+
   <!-- Map -->
   <group if="$(var launch_map)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_map_component.launch.xml"/>
@@ -109,6 +119,9 @@
     </include>
   </group>
 
+  <!-- Static_TL 시나리오 구간 고정된 신호등 초록불 자동 퍼블리쉬-->
+  <node pkg="static_traffic_light_pub" exec="static_tl_publisher" name="static_tl_publisher" output="screen" if="$(var static_TL)"/>
+
   <!-- Planning -->
   <group if="$(var launch_planning)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_planning_component.launch.xml">
@@ -124,7 +137,8 @@
       <arg name="module_preset" value="$(var control_module_preset)"/>      
     </include>
     <!-- CAN데이터 받아서 pub -->
-    <node pkg="ioniq5_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>
+    <node pkg="ioniq5_d2x_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>
+    <!--<node pkg="ioniq5_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>-->
     <!-- QT ROS2 Interface Node -->
     <node pkg="qt_ros2_interface" exec="qt_ros2_node" name="qt_ros2_interface" output="screen"/>
     <!-- Control Command Converter Node  -->

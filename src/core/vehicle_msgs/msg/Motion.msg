@@ -1,0 +1,7 @@
+uint8 navsat
+vehicle_msgs/Velocity velocity
+vehicle_msgs/Position position
+vehicle_msgs/Orientation orientation
+vehicle_msgs/Acceleration acceleration
+vehicle_msgs/RotationRate rotationrate
+
