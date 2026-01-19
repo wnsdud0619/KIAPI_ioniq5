@@ -22,11 +22,11 @@ Panels:
     Name: Views
     Splitter Ratio: 0.5
   - Class: AutowareDateTimePanel
-    Name: AutowareDateTimePanel
+    Name: KIAPI_DateTimePanel
   - Class: rviz_plugins::AutowareStatePanel
-    Name: AutowareStatePanel
+    Name: KIAPI_StatePanel
   - Class: rviz_text_panel::TextPanel
-    Name: TextPanel
+    Name: KIAPI_TextPanel
 Visualization Manager:
   Class: ""
   Displays:

@@ -191,7 +191,7 @@ QVBoxLayout * AutowareStatePanel::makeOperationModeGroup()
     control_mode_switch_ptr_, &QCheckBox::stateChanged, this,
     &AutowareStatePanel::onSwitchStateChanged);
 
-  control_mode_label_ptr_ = new QLabel("Autoware Control");
+  control_mode_label_ptr_ = new QLabel("KIAPI Control");
   control_mode_label_ptr_->setStyleSheet(
     QString("color: %1; font-weight: bold;")
       .arg(autoware::state_rviz_plugin::colors::default_colors.on_secondary_container.c_str()));
