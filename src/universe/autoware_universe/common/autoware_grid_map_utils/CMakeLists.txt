@@ -20,6 +20,10 @@ ament_auto_add_library(${PROJECT_NAME} SHARED
 
 target_link_libraries(${PROJECT_NAME})
 
+target_compile_definitions(${PROJECT_NAME}
+  PRIVATE AUTOWARE_GRID_MAP_UTILS_BUILDING_LIBRARY
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
