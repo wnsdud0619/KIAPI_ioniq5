@@ -38,7 +38,7 @@ from shapely.affinity import rotate as shp_rotate, translate as shp_translate, s
 
 # ──────────────── 사용자 설정 ─────────────────────────────
 # DATA_ROOT  = Path("/home/kiapi/Downloads/new좌표계") #원본
-# DATA_ROOT  = Path("/home/aiict/KIAPI_ioniq5/map_data/KIAPI_SHP") # shp 파일 저장소
+#DATA_ROOT  = Path("/home/kiapi/Downloads/KIAPI_SHP_260107 (final)") #원본
 FRAME_ID   = "map"
 PUBLISH_HZ = 2.0
 
@@ -169,6 +169,9 @@ TL_COL_Y    = _rgba(0.95, 0.85, 0.10, 1.0)
 TL_COL_G    = _rgba(0.10, 0.95, 0.20, 1.0)
 TL_COL_W    = _rgba(0.95, 0.95, 0.95, 1.0)
 
+# ===== C1 Z-Height Calculation =====
+C1_Z_OFFSET_BASE = 47.0  # 지오메트리 Z값에서 차감할 기본 높이 (예: 53m - 47m = 6m)
+
 # 보행자 신호 전용 낮은 높이 오프셋
 TL_PED_LOWER = 1.20
 # 보행자 신호 방향 보정: 왼쪽으로 90deg
@@ -219,6 +222,9 @@ C1_FLIP_RIGHT_SIDE = False   # center 기반 yaw 사용 시 비활성
 C1_SPLIT_MODE = "median_x"   # "median_x" 또는 "mean_x"
 C1_SPLIT_X_MANUAL = None     # float 값 지정 시 그 값을 기준선으로 사용
 C1_FLIP_DEBUG_LOG = True
+#
+# Link 기반 yaw 추정용 A2_LINK index 사용 시 설정/오프셋이 선행되어야 하므로
+# __init__에서 offset 결정 후 로드합니다.
 
 # ================================================================
 # Attribute & 값 파싱 유틸
@@ -303,6 +309,9 @@ def _yaw_mean(a: float, b: float) -> float:
 
 
 def _yaw_from_heading_value(hv: float, yaw_geom: float) -> float:
+    """
+    hv(Heading/Angle/Yaw 컬럼)을 yaw(map frame)로 변환해 geometry 축과 가장 가까운 후보 선택
+    """
     raw = float(hv)
     raws = []
     if abs(raw) <= 2.0 * math.pi + 0.2:
@@ -330,6 +339,10 @@ def _yaw_from_heading_azimuth(hv: float, yaw_geom: float) -> float:
 
 
 def _direct_yaw_by_pointiness(poly: Polygon, yaw_guess: float) -> float:
+    """
+    yaw_guess 축을 기준으로 양끝 영역에서 '가장 뾰족한 꼭짓점(최소 각도)'을 찾아
+    그 쪽을 head로 보고 yaw를 뒤집습니다.
+    """
     coords = list(poly.exterior.coords)
     if len(coords) < 6:
         return _wrap_pi(yaw_guess)
@@ -372,6 +385,9 @@ def _direct_yaw_by_pointiness(poly: Polygon, yaw_guess: float) -> float:
 
 
 def _direct_yaw_if_asymmetric(poly: Polygon, yaw_guess: float) -> float:
+    """
+    footprint가 대칭이면 flip을 적용하지 않고, 비대칭일 때만 pointiness flip
+    """
     coords = list(poly.exterior.coords)
     if len(coords) < 6:
         return _wrap_pi(yaw_guess)
@@ -426,7 +442,7 @@ def _robust_split_x(xs: list[float]) -> float:
 
 
 # ================================================================
-# 방향(yaw) 및 벡터
+# 방향(yaw) 및 벡터 헬퍼
 # ================================================================
 def _maybe_flip_yaw_right(px: float, split_x: float, yaw: float) -> float:
     if not C1_FLIP_RIGHT_SIDE:
@@ -451,7 +467,7 @@ def _clamp01(t: float) -> float:
 
 
 def _project_point_to_segment(px, py, ax, ay, bx, by):
-    """점 P를 선분 AB에 투영한 점 Q"""
+    """점 P를 선분 AB에 투영한 점 Q(클램프 포함)"""
     vx, vy = (bx - ax), (by - ay)
     wx, wy = (px - ax), (py - ay)
     vv = vx*vx + vy*vy
@@ -466,7 +482,7 @@ def _project_point_to_segment(px, py, ax, ay, bx, by):
 
 def _yaw_from_linestring_tangent(line: SLineString, px: float, py: float) -> float:
     """
-    LineString에서 (px,py)에 가장 가까운 위치의 접선 방향(rad, +x 기준)
+    LineString에서 (px,py)에 가장 가까운 위치의 접선 방향(rad, +x 기준 CCW)
     """
     P = SPoint(px, py)
     L = float(line.length)
@@ -495,6 +511,7 @@ def _yaw_map_to_ros(yaw_map: float) -> float:
 
 
 def _quat_from_yaw_map(yaw: float) -> Quaternion:
+    # yaw는 "map yaw"로 들어온다고 가정
     return _quat_from_yaw_ros(_yaw_map_to_ros(yaw))
 
 
@@ -539,7 +556,7 @@ def _add_c1_head_only(ma: MarkerArray, ns: str, mid: int,
     """
     C1 신호등 헤드(박스 + 램프)만 생성.
     - (px, py): head 위치 (map 좌표)
-    - yaw_front: head가 바라보는 방향(map, +Y front)
+    - yaw_front: head가 바라보는 방향(map yaw, +Y front)
     - t: Type 코드에 따라 orient/lamps/colors 결정
     - pole_h: 박스 z 위치 계산용 pole 높이(보행자 등 낮은 경우 조정)
     """
@@ -592,7 +609,7 @@ def _add_c1_head_only(ma: MarkerArray, ns: str, mid: int,
     dirx = -sy
     diry =  cy
 
-    # 앞/뒷면 오프셋 (대칭)
+    # 앞/뒷면 오프셋 (대칭) + z-fighting 방지 eps
     fx_f = dirx * (face + TL_LAMP_EPS)
     fy_f = diry * (face + TL_LAMP_EPS)
     fx_b = dirx * (-(face + TL_LAMP_EPS))
@@ -708,15 +725,19 @@ def _add_c1_mastarm_twoheads(ma: MarkerArray, ns: str, mid: int,
 
 def _add_c1_traffic_light_markers(ma: MarkerArray, ns: str, mid: int,
                                   px: float, py: float, yaw: float,
-                                  t: Optional[int]) -> int:
+                                  t: Optional[int],
+                                  custom_h: Optional[float] = None) -> int:
     """
-    C1 단일 포스트.
+    C1 단일 포스트+헤드 렌더러(v1).
     - (px, py): pole 위치(기본은 head와 동일)
-    - yaw: map(front)
+    - yaw: map yaw(front)
     - t: Type 코드
     """
     spec = _c1_type_spec(t)
-    pole_h = TL_POLE_H - (TL_PED_LOWER if spec.get("kind") == "ped" else 0.0)
+    if custom_h is not None and custom_h > 0.5:
+        pole_h = custom_h
+    else:
+        pole_h = TL_POLE_H - (TL_PED_LOWER if spec.get("kind") == "ped" else 0.0)
     # etc는 head_only로 처리
     if spec["kind"] == "etc":
         return _add_c1_head_only(ma, ns, mid, px, py, yaw, t, pole_h=pole_h)
@@ -745,7 +766,7 @@ def _add_c1_traffic_light_markers_v2(ma: MarkerArray, ns: str, mid: int,
     C1 포스트+헤드 렌더러(v2): pole/head 위치를 분리 입력.
     - head_xy: head 위치 (필수)
     - pole_xy: pole 위치 (None이면 head 위치 재사용)
-    - yaw: map
+    - yaw: map yaw(front)
     - t: Type 코드
     """
     hx, hy = head_xy
@@ -869,6 +890,10 @@ def _resample_linestring(line: SLineString, step: float) -> list[tuple[float, fl
 def _append_prism_segment_triangles(tris: list[Point],
                                     p0: tuple[float, float], p1: tuple[float, float],
                                     half_w: float, z0: float, z1: float):
+    """
+    2D 선분(p0->p1)을 폭(2*half_w)+높이(z1-z0) 프리즘으로 만들어 TRIANGLE_LIST 포인트에 추가.
+    상면 + 좌/우 측면만 생성(바닥은 생략).
+    """
     x0, y0 = p0
     x1, y1 = p1
     dx, dy = (x1 - x0), (y1 - y0)
@@ -909,6 +934,10 @@ def _shift_polygon_keep_holes(p: Polygon, xo: float, yo: float) -> Polygon:
     return Polygon(ext, holes)
 
 def _triangulate_to_points(poly: Polygon, z: float = 0.01) -> List[Point]:
+    """
+    TRIANGLE_LIST용으로 삼각형 포인트를 생성.
+    holes/자기교차 등에서 triangulate가 과잉 생성할 수 있어 intersection으로 클리핑합니다.
+    """
     pts: List[Point] = []
     if poly.is_empty or poly.area < 1e-6:
         return pts
@@ -943,6 +972,10 @@ def _triangulate_to_points(poly: Polygon, z: float = 0.01) -> List[Point]:
     return pts
 
 def _mrr_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
+    """
+    minimum rotated rectangle로부터:
+      center(x,y), yaw(장축 방향), long_L, short_L
+    """
     rect = poly.minimum_rotated_rectangle
     rc = list(rect.exterior.coords)
     if len(rc) < 4:
@@ -971,6 +1004,9 @@ def _mrr_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
     return float(c.x), float(c.y), float(yaw), float(long_L), float(short_L)
 
 def _dominant_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
+    """
+    외곽선 segment들의 지배적 방향으로 yaw 추정
+    """
     c = poly.centroid
     coords = list(poly.exterior.coords)
     if len(coords) < 3:
@@ -1012,6 +1048,10 @@ def _dominant_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
 
 
 def _pca_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
+    """
+    Polygon 외곽점 PCA로 진행방향(yaw) 추정 (fork/비대칭에 강함)
+    returns: center(x,y), yaw, long_L, short_L
+    """
     if poly.is_empty or poly.area < 1e-8:
         c = poly.centroid
         return float(c.x), float(c.y), 0.0, 4.0, 1.6
@@ -1045,6 +1085,7 @@ def _pca_pose(poly: Polygon) -> Tuple[float, float, float, float, float]:
 
 # ----------------------- Crosswalk / Arrow helpers -----------------
 def _make_head_triangle(x: float, y: float, yaw: float, head_l: float, head_w: float) -> Polygon:
+    """화살촉 삼각형(로컬 좌표 기준, tip이 (x,y)에서 yaw 방향)"""
     cy = math.cos(yaw); sy = math.sin(yaw)
     tx, ty = x, y
     bx, by = x - cy * head_l, y - sy * head_l
@@ -1067,6 +1108,7 @@ def _bezier_points(p0, p1, p2, p3, n: int = 28):
 
 
 def _head_from_polyline_end(pts, head_l: float, head_w: float) -> Polygon:
+    """폴리라인 끝 접선 방향으로 화살촉 생성"""
     if len(pts) < 2:
         x, y = pts[-1]
         return _make_head_triangle(x, y, 0.0, head_l=head_l, head_w=head_w)
@@ -1082,7 +1124,11 @@ def _make_curved_arrow_polygon_local(L: float, body_w: float,
                                      head_l: float,
                                      head_w: float,
                                      n_arc: int = 20) -> Polygon:
-
+    """
+    로컬 좌표계에서 곡선 화살표 폴리곤 생성
+      - 시작 진행방향: +x
+      - turn: "left" / "right" / "uturn"
+    """
     if turn == "uturn":
         theta_deg = max(theta_deg, 170.0)
 
@@ -1227,6 +1273,10 @@ def _make_turn_only_Lshape_local(L: float, body_w: float,
 def _make_turn_only_smooth_local(L: float, body_w: float,
                                  head_l: float, head_w: float,
                                  turn: str, short_L: float) -> Polygon:
+    """
+    좌/우 단독 회전 화살표 (실도로 느낌): 긴 꼬리 + 곡선 + 화살촉
+    로컬 좌표: 진행 +x, 좌회전 +y, 우회전 -y
+    """
     sign = +1.0 if turn == "left" else -1.0
 
     tail_len = 0.58 * L
@@ -1740,7 +1790,7 @@ class HDMapPublisher(Node):
         input_path_str = self.get_parameter("map_path").value
         self.data_root = Path(input_path_str) / "KIAPI_SHP"
         self.get_logger().info(f"[Init] Target Data Root: {self.data_root}")
-
+        
         self._pubs : Dict[str, rclpy.publisher.Publisher] = {}
         self._cache: Dict[str, MarkerArray]               = {}
         self._x_off = self._y_off = 0.0
@@ -1761,7 +1811,7 @@ class HDMapPublisher(Node):
         self._load_c6_post_index()
         self._scan_load()
         self.create_timer(1.0 / PUBLISH_HZ, self._tick)
-        
+
     def _decide_offset(self):
         if X_OFFSET is not None and Y_OFFSET is not None:
             self._x_off = float(X_OFFSET)
@@ -1782,7 +1832,6 @@ class HDMapPublisher(Node):
             except Exception as e:
                 self.get_logger().warn(f"offset.yaml 파싱 실패({e}) → 재계산")
 
-        #shp_any = next(DATA_ROOT.rglob("*.shp"), None)
         shp_any = next(self.data_root.rglob("*.shp"), None)
         if shp_any is None:
             self.get_logger().fatal("*.shp 파일을 찾을 수 없습니다.")
@@ -1807,7 +1856,6 @@ class HDMapPublisher(Node):
         self.get_logger().info(f"[TF] world → {FRAME_ID}  (-{self._x_off:.1f}, -{self._y_off:.1f}, 0)")
 
     def _load_a2_link_index(self):
-        #shp = next((p for p in DATA_ROOT.rglob("*.shp") if p.stem.lower() == "a2_link"), None)
         shp = next((p for p in self.data_root.rglob("*.shp") if p.stem.lower() == "a2_link"), None)
         if shp is None:
             self.get_logger().warning("[A2] A2_LINK.shp not found → C1 yaw uses heading fallback")
@@ -1863,7 +1911,6 @@ class HDMapPublisher(Node):
         self.get_logger().info(f"[A2] link index built: {n_ok}")
 
     def _load_c6_post_index(self):
-        #shp = next((p for p in DATA_ROOT.rglob("*.shp") if p.stem.lower() == "c6_postpoint"), None)
         shp = next((p for p in self.data_root.rglob("*.shp") if p.stem.lower() == "c6_postpoint"), None)
         if shp is None:
             self.get_logger().warning("[C6] C6_POSTPOINT.shp not found → pole uses C1 point fallback")
@@ -2152,8 +2199,6 @@ class HDMapPublisher(Node):
 
     def _scan_load(self):
         """DATA_ROOT 이하 *.shp를 스캔해 레이어별 토픽으로 퍼블리셔/캐시를 구성."""
-        #region = slug(DATA_ROOT.name)
-        #all_shp: List[Path] = list(DATA_ROOT.rglob("*.shp"))
         region = slug(self.data_root.name)
         all_shp: List[Path] = list(self.data_root.rglob("*.shp"))
         if not all_shp:
@@ -2181,7 +2226,6 @@ class HDMapPublisher(Node):
             self._pubs[topic]  = self.create_publisher(MarkerArray, topic, 10)
             self._cache[topic] = mk
 
-            #rel = str(shp.relative_to(DATA_ROOT))
             rel = str(shp.relative_to(self.data_root))
             tag = "B2" if is_b2 else ("B3" if is_b3 else ("A5" if is_a5 else ("C3" if is_c3 else "--")))
             self.get_logger().info(f"[{tag}] {rel:<60} → {len(mk.markers):4d} ▶ {topic}")
@@ -2268,6 +2312,12 @@ class HDMapPublisher(Node):
                     "a2": (lid_phys, d_a2),
                 })
 
+            def _c1_real_h(hz: Optional[float]) -> Optional[float]:
+                if hz is None:
+                    return None
+                h_val = float(hz) - C1_Z_OFFSET_BASE
+                return h_val if h_val > 0.5 else None
+
             # ---- grouping by post_id (mastarm 후보는 같은 post 공유) ----
             by_post: Dict[str, list] = {}
             singles_no_post = []
@@ -2286,21 +2336,24 @@ class HDMapPublisher(Node):
 
                 # non-vehicle (ped/bike/etc) 는 개별 pole+head로
                 for it in nonveh:
-                    mid = _add_c1_traffic_light_markers(ma, ns, mid, bx, by, it["yaw"], it["t"])
+                    real_h = _c1_real_h(it["hz"])
+                    mid = _add_c1_traffic_light_markers(ma, ns, mid, bx, by, it["yaw"], it["t"], custom_h=real_h)
 
                 # vehicle 그룹 처리
                 if len(veh) < 2:
                     # 1개면: pole은 post, head는 C1 좌표에 찍되 pole은 공통 위치로
                     if len(veh) == 1:
                         it = veh[0]
+                        real_h = _c1_real_h(it["hz"])
+                        pole_h = real_h if (real_h is not None) else TL_POLE_H
                         # pole
                         q = _quat_from_yaw_map(it["yaw"])
                         pole = Marker(type=Marker.CYLINDER)
                         pole.scale.x = pole.scale.y = 2.0 * TL_POLE_R
-                        pole.scale.z = TL_POLE_H
+                        pole.scale.z = pole_h
                         pole.pose.position.x = bx
                         pole.pose.position.y = by
-                        pole.pose.position.z = TL_POLE_H * 0.5
+                        pole.pose.position.z = pole_h * 0.5
                         pole.pose.orientation = q
                         ma.markers.append(self._finish(pole, ns, mid, TL_COL_POLE)); mid += 1
 
@@ -2309,7 +2362,7 @@ class HDMapPublisher(Node):
                         dx = hx - bx
                         dy = hy - by
                         Larm = math.hypot(dx, dy)
-                        arm_z = TL_POLE_H - TL_ARM_DROP_Z
+                        arm_z = pole_h - TL_ARM_DROP_Z
 
                         if Larm >= 0.20:
                             arm_yaw_ros = math.atan2(dy, dx)
@@ -2326,7 +2379,7 @@ class HDMapPublisher(Node):
                             ma.markers.append(self._finish(arm, ns, mid, TL_COL_POLE)); mid += 1
 
                         # head는 C1 점 위치(arm이 있든 없든 head는 이게 더 자연스러움)
-                        mid = _add_c1_head_only(ma, ns, mid, hx, hy, it["yaw"], it["t"])
+                        mid = _add_c1_head_only(ma, ns, mid, hx, hy, it["yaw"], it["t"], pole_h=pole_h)
                     continue
 
                 # ---- mastarm(2-head) 선택: lateral 조건 + yaw 조건 ----
@@ -2390,17 +2443,28 @@ class HDMapPublisher(Node):
                             f"(span_map={span_yaw_map:+.2f}, yaw_pair={yaw_pair:+.2f})"
                         )
 
+                        rh1 = _c1_real_h(h1["hz"])
+                        rh2 = _c1_real_h(h2["hz"])
+                        if rh1 is not None and rh2 is not None:
+                            pole_h = (rh1 + rh2) * 0.5
+                        elif rh1 is not None:
+                            pole_h = rh1
+                        elif rh2 is not None:
+                            pole_h = rh2
+                        else:
+                            pole_h = TL_POLE_H
+
                         q_pole = _quat_from_yaw_map(yaw_pair)
                         pole = Marker(type=Marker.CYLINDER)
                         pole.scale.x = pole.scale.y = 2.0 * TL_POLE_R
-                        pole.scale.z = TL_POLE_H
+                        pole.scale.z = pole_h
                         pole.pose.position.x = bx
                         pole.pose.position.y = by
-                        pole.pose.position.z = TL_POLE_H * 0.5
+                        pole.pose.position.z = pole_h * 0.5
                         pole.pose.orientation = q_pole
                         ma.markers.append(self._finish(pole, ns, mid, TL_COL_POLE)); mid += 1
 
-                        arm_z = TL_POLE_H - TL_ARM_DROP_Z
+                        arm_z = pole_h - TL_ARM_DROP_Z
 
                         dx12, dy12 = (x2 - x1), (y2 - y1)
                         span_len = math.hypot(dx12, dy12)
@@ -2435,23 +2499,25 @@ class HDMapPublisher(Node):
                             arm_attach.pose.orientation = q_attach
                             ma.markers.append(self._finish(arm_attach, ns, mid, TL_COL_POLE)); mid += 1
 
-                        mid = _add_c1_head_only(ma, ns, mid, x1, y1, yaw_pair, h1["t"])
-                        mid = _add_c1_head_only(ma, ns, mid, x2, y2, yaw_pair, h2["t"])
+                        mid = _add_c1_head_only(ma, ns, mid, x1, y1, yaw_pair, h1["t"], pole_h=pole_h)
+                        mid = _add_c1_head_only(ma, ns, mid, x2, y2, yaw_pair, h2["t"], pole_h=pole_h)
                         continue
 
                     # 기존 fallback: 개별 pole+head
                     for it in veh:
+                        real_h = _c1_real_h(it["hz"])
+                        pole_h = real_h if (real_h is not None) else TL_POLE_H
                         q = _quat_from_yaw_map(it["yaw"])
                         pole = Marker(type=Marker.CYLINDER)
                         pole.scale.x = pole.scale.y = 2.0 * TL_POLE_R
-                        pole.scale.z = TL_POLE_H
+                        pole.scale.z = pole_h
                         pole.pose.position.x = bx
                         pole.pose.position.y = by
-                        pole.pose.position.z = TL_POLE_H * 0.5
+                        pole.pose.position.z = pole_h * 0.5
                         pole.pose.orientation = q
                         ma.markers.append(self._finish(pole, ns, mid, TL_COL_POLE)); mid += 1
 
-                        mid = _add_c1_head_only(ma, ns, mid, it["hx"], it["hy"], it["yaw"], it["t"])
+                        mid = _add_c1_head_only(ma, ns, mid, it["hx"], it["hy"], it["yaw"], it["t"], pole_h=pole_h)
                     continue
 
                 _, i, j = best_pair
@@ -2460,14 +2526,25 @@ class HDMapPublisher(Node):
                 h1, h2 = veh[i], veh[j]
                 yaw_pair = _yaw_mean(h1["yaw"], h2["yaw"])
 
+                rh1 = _c1_real_h(h1["hz"])
+                rh2 = _c1_real_h(h2["hz"])
+                if rh1 is not None and rh2 is not None:
+                    pole_h = (rh1 + rh2) * 0.5
+                elif rh1 is not None:
+                    pole_h = rh1
+                elif rh2 is not None:
+                    pole_h = rh2
+                else:
+                    pole_h = TL_POLE_H
+
                 # pole at post (그대로 유지)
                 q_pole = _quat_from_yaw_map(yaw_pair)
                 pole = Marker(type=Marker.CYLINDER)
                 pole.scale.x = pole.scale.y = 2.0 * TL_POLE_R
-                pole.scale.z = TL_POLE_H
+                pole.scale.z = pole_h
                 pole.pose.position.x = bx
                 pole.pose.position.y = by
-                pole.pose.position.z = TL_POLE_H * 0.5
+                pole.pose.position.z = pole_h * 0.5
                 pole.pose.orientation = q_pole
                 ma.markers.append(self._finish(pole, ns, mid, TL_COL_POLE)); mid += 1
 
@@ -2476,7 +2553,7 @@ class HDMapPublisher(Node):
                 x2, y2 = float(h2["hx"]), float(h2["hy"])
 
                 # 가로보 높이
-                arm_z = TL_POLE_H - TL_ARM_DROP_Z
+                arm_z = pole_h - TL_ARM_DROP_Z
 
                 # (A) 가로보: head1 <-> head2
                 dx12, dy12 = (x2 - x1), (y2 - y1)
@@ -2516,8 +2593,8 @@ class HDMapPublisher(Node):
                     ma.markers.append(self._finish(arm_attach, ns, mid, TL_COL_POLE)); mid += 1
 
                 # heads at C1 points (박스+램프)
-                mid = _add_c1_head_only(ma, ns, mid, x1, y1, yaw_pair, h1["t"])
-                mid = _add_c1_head_only(ma, ns, mid, x2, y2, yaw_pair, h2["t"])
+                mid = _add_c1_head_only(ma, ns, mid, x1, y1, yaw_pair, h1["t"], pole_h=pole_h)
+                mid = _add_c1_head_only(ma, ns, mid, x2, y2, yaw_pair, h2["t"], pole_h=pole_h)
 
             # ---- items without any post ----
             for it in singles_no_post:

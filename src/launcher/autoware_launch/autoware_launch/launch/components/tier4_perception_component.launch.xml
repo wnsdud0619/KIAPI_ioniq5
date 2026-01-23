@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="use_empty_dynamic_object_publisher" default="false" description="if true, /perception/object_recognition/objects topic has an empty DynamicObjectArray"/>
-  <arg name="use_traffic_light_recognition" default="false" description="use traffic light recognition module, if false, traffic light recognition module will not be launched"/>
+  <arg name="use_traffic_light_recognition" default="true" description="use traffic light recognition module, if false, traffic light recognition module will not be launched"/>
 
   <arg name="use_low_height_cropbox" default="false" description="use low height crop filter in clustering"/>
   <arg name="use_vector_map" default="true" description="use vector map in prediction"/>
@@ -20,7 +20,7 @@
   <arg name="detected_objects_validation_method" default="obstacle_pointcloud" description="options: obstacle_pointcloud, occupancy_grid (must be used with laserscan_based_occupancy_grid_map)"/>
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
   <arg name="lidar_detection_model" default="centerpoint" description="If the model name is not declared, the default model in perception.launch.xml will be used"/>
-  <arg name="all_traffic_light_camera" default="[camera6, camera7]" description="choose camera which use for traffic light recognition"/>
+  <arg name="all_traffic_light_camera" default="[camera]" description="choose camera which use for traffic light recognition"/>
 
   <include file="$(find-pkg-share tier4_perception_launch)/launch/perception.launch.xml">
     <!-- Options to Switch Launch Function/Module -->
