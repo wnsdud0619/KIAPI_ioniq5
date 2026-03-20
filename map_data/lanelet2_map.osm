@@ -16672,7 +16672,7 @@
     <member type="way" ref="200196" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16681,7 +16681,7 @@
     <member type="way" ref="200204" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16690,7 +16690,7 @@
     <member type="way" ref="200211" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16700,7 +16700,7 @@
     <member type="way" ref="200222" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -16710,7 +16710,7 @@
     <member type="way" ref="200239" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16720,7 +16720,7 @@
     <member type="way" ref="200249" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -16730,7 +16730,7 @@
     <member type="way" ref="200265" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -16740,7 +16740,7 @@
     <member type="way" ref="200283" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -16750,7 +16750,7 @@
     <member type="way" ref="200336" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16759,7 +16759,7 @@
     <member type="way" ref="200297" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16768,7 +16768,7 @@
     <member type="way" ref="200303" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16777,7 +16777,7 @@
     <member type="way" ref="199743" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16787,7 +16787,7 @@
     <member type="way" ref="199757" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16797,7 +16797,7 @@
     <member type="way" ref="199773" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16807,7 +16807,7 @@
     <member type="way" ref="199785" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16817,7 +16817,7 @@
     <member type="way" ref="200310" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16826,7 +16826,7 @@
     <member type="way" ref="200316" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16835,7 +16835,7 @@
     <member type="way" ref="200322" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16844,7 +16844,7 @@
     <member type="way" ref="200328" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16853,7 +16853,7 @@
     <member type="way" ref="199801" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16863,7 +16863,7 @@
     <member type="way" ref="199805" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16873,7 +16873,7 @@
     <member type="way" ref="199809" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -16883,7 +16883,7 @@
     <member type="way" ref="199816" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16892,7 +16892,7 @@
     <member type="way" ref="199822" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16901,7 +16901,7 @@
     <member type="way" ref="199827" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16910,7 +16910,7 @@
     <member type="way" ref="199226" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16919,7 +16919,7 @@
     <member type="way" ref="199834" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16928,7 +16928,7 @@
     <member type="way" ref="199840" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16937,7 +16937,7 @@
     <member type="way" ref="199846" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16946,7 +16946,7 @@
     <member type="way" ref="199852" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16955,7 +16955,7 @@
     <member type="way" ref="199860" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16964,7 +16964,7 @@
     <member type="way" ref="199864" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16973,7 +16973,7 @@
     <member type="way" ref="199868" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16982,7 +16982,7 @@
     <member type="way" ref="199872" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -16991,7 +16991,7 @@
     <member type="way" ref="199885" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17000,7 +17000,7 @@
     <member type="way" ref="199904" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17009,7 +17009,7 @@
     <member type="way" ref="199923" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17018,7 +17018,7 @@
     <member type="way" ref="199942" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17027,7 +17027,7 @@
     <member type="way" ref="199964" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17036,7 +17036,7 @@
     <member type="way" ref="199974" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17045,7 +17045,7 @@
     <member type="way" ref="199984" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17054,7 +17054,7 @@
     <member type="way" ref="200003" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17064,7 +17064,7 @@
     <member type="way" ref="200017" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17074,7 +17074,7 @@
     <member type="way" ref="200033" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17084,7 +17084,7 @@
     <member type="way" ref="200053" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17093,7 +17093,7 @@
     <member type="way" ref="200066" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17103,7 +17103,7 @@
     <member type="way" ref="200084" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17113,7 +17113,7 @@
     <member type="way" ref="200102" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17123,7 +17123,7 @@
     <member type="way" ref="200122" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17132,7 +17132,7 @@
     <member type="way" ref="200126" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17141,7 +17141,7 @@
     <member type="way" ref="200130" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17150,7 +17150,7 @@
     <member type="way" ref="200140" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17159,7 +17159,7 @@
     <member type="way" ref="200152" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17168,7 +17168,7 @@
     <member type="way" ref="200163" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17177,7 +17177,7 @@
     <member type="way" ref="199240" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17186,7 +17186,7 @@
     <member type="way" ref="200175" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17195,7 +17195,7 @@
     <member type="way" ref="200179" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17204,7 +17204,7 @@
     <member type="way" ref="200183" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17213,7 +17213,7 @@
     <member type="way" ref="200188" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17222,7 +17222,7 @@
     <member type="way" ref="200190" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17231,7 +17231,7 @@
     <member type="way" ref="200192" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17240,7 +17240,7 @@
     <member type="way" ref="199120" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17250,7 +17250,7 @@
     <member type="way" ref="199078" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17260,7 +17260,7 @@
     <member type="way" ref="199108" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17270,7 +17270,7 @@
     <member type="way" ref="199216" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17280,7 +17280,7 @@
     <member type="way" ref="199209" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17290,7 +17290,7 @@
     <member type="way" ref="199185" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17300,7 +17300,7 @@
     <member type="way" ref="199143" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17310,7 +17310,7 @@
     <member type="way" ref="199132" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17320,7 +17320,7 @@
     <member type="way" ref="199152" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17330,7 +17330,7 @@
     <member type="way" ref="199092" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17340,7 +17340,7 @@
     <member type="way" ref="199167" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17350,7 +17350,7 @@
     <member type="way" ref="199194" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17360,7 +17360,7 @@
     <member type="way" ref="199597" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17369,7 +17369,7 @@
     <member type="way" ref="199694" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17378,7 +17378,7 @@
     <member type="way" ref="199625" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17387,7 +17387,7 @@
     <member type="way" ref="199671" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17396,7 +17396,7 @@
     <member type="way" ref="199657" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17405,7 +17405,7 @@
     <member type="way" ref="199460" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17415,7 +17415,7 @@
     <member type="way" ref="199487" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17425,7 +17425,7 @@
     <member type="way" ref="199255" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17434,7 +17434,7 @@
     <member type="way" ref="199608" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17443,7 +17443,7 @@
     <member type="way" ref="199525" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17453,7 +17453,7 @@
     <member type="way" ref="199585" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17463,7 +17463,7 @@
     <member type="way" ref="199473" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17473,7 +17473,7 @@
     <member type="way" ref="199533" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17483,7 +17483,7 @@
     <member type="way" ref="199546" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17493,7 +17493,7 @@
     <member type="way" ref="199574" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17503,7 +17503,7 @@
     <member type="way" ref="199496" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17513,7 +17513,7 @@
     <member type="way" ref="199511" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17523,7 +17523,7 @@
     <member type="way" ref="199269" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17532,7 +17532,7 @@
     <member type="way" ref="199316" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17542,7 +17542,7 @@
     <member type="way" ref="199336" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17551,7 +17551,7 @@
     <member type="way" ref="199715" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17560,7 +17560,7 @@
     <member type="way" ref="199330" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17569,7 +17569,7 @@
     <member type="way" ref="199290" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17579,7 +17579,7 @@
     <member type="way" ref="199417" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17588,7 +17588,7 @@
     <member type="way" ref="199432" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17597,7 +17597,7 @@
     <member type="way" ref="199347" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17606,7 +17606,7 @@
     <member type="way" ref="199362" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17615,7 +17615,7 @@
     <member type="way" ref="199368" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17624,7 +17624,7 @@
     <member type="way" ref="199398" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17633,7 +17633,7 @@
     <member type="way" ref="199378" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17642,7 +17642,7 @@
     <member type="way" ref="199443" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17651,7 +17651,7 @@
     <member type="way" ref="200343" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17660,7 +17660,7 @@
     <member type="way" ref="200355" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17669,7 +17669,7 @@
     <member type="way" ref="200370" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17678,7 +17678,7 @@
     <member type="way" ref="200379" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17687,7 +17687,7 @@
     <member type="way" ref="200388" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17696,7 +17696,7 @@
     <member type="way" ref="200397" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17705,7 +17705,7 @@
     <member type="way" ref="200406" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17714,7 +17714,7 @@
     <member type="way" ref="200416" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17723,7 +17723,7 @@
     <member type="way" ref="200412" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17732,7 +17732,7 @@
     <member type="way" ref="200435" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17741,7 +17741,7 @@
     <member type="way" ref="200446" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17750,7 +17750,7 @@
     <member type="way" ref="200460" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17759,7 +17759,7 @@
     <member type="way" ref="200470" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17768,7 +17768,7 @@
     <member type="way" ref="200479" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17777,7 +17777,7 @@
     <member type="way" ref="200488" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17786,7 +17786,7 @@
     <member type="way" ref="201111" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17795,7 +17795,7 @@
     <member type="way" ref="200432" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17804,7 +17804,7 @@
     <member type="way" ref="200504" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17813,7 +17813,7 @@
     <member type="way" ref="200512" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17822,7 +17822,7 @@
     <member type="way" ref="200385" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17831,7 +17831,7 @@
     <member type="way" ref="200541" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17840,7 +17840,7 @@
     <member type="way" ref="200545" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17849,7 +17849,7 @@
     <member type="way" ref="200551" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17858,7 +17858,7 @@
     <member type="way" ref="200563" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -17867,7 +17867,7 @@
     <member type="way" ref="200575" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17877,7 +17877,7 @@
     <member type="way" ref="200597" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17887,7 +17887,7 @@
     <member type="way" ref="200607" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17897,7 +17897,7 @@
     <member type="way" ref="200622" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17907,7 +17907,7 @@
     <member type="way" ref="200616" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17918,7 +17918,7 @@
     <member type="relation" ref="1270012663" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17929,7 +17929,7 @@
     <member type="relation" ref="1270012766" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17940,7 +17940,7 @@
     <member type="relation" ref="1270012766" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17951,7 +17951,7 @@
     <member type="relation" ref="1270012787" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -17962,7 +17962,7 @@
     <member type="relation" ref="1270012787" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17973,7 +17973,7 @@
     <member type="relation" ref="1270012787" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -17984,7 +17984,7 @@
     <member type="relation" ref="1270012787" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -17995,7 +17995,7 @@
     <member type="relation" ref="1270012809" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18006,7 +18006,7 @@
     <member type="relation" ref="1270012809" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18017,7 +18017,7 @@
     <member type="relation" ref="1270012809" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18028,7 +18028,7 @@
     <member type="relation" ref="1270012809" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18039,7 +18039,7 @@
     <member type="relation" ref="1270012663" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18050,7 +18050,7 @@
     <member type="relation" ref="1270012723" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18061,7 +18061,7 @@
     <member type="relation" ref="1270012723" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18072,7 +18072,7 @@
     <member type="relation" ref="1270012642" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18083,7 +18083,7 @@
     <member type="relation" ref="1270012642" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18094,7 +18094,7 @@
     <member type="relation" ref="1270012642" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18105,7 +18105,7 @@
     <member type="relation" ref="1270012642" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18116,7 +18116,7 @@
     <member type="relation" ref="1270012745" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18127,7 +18127,7 @@
     <member type="relation" ref="1270012745" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18138,7 +18138,7 @@
     <member type="relation" ref="1270012619" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18149,7 +18149,7 @@
     <member type="relation" ref="1270012619" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18160,7 +18160,7 @@
     <member type="relation" ref="1270012619" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18171,7 +18171,7 @@
     <member type="relation" ref="1270012619" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18182,7 +18182,7 @@
     <member type="relation" ref="1270012702" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18192,7 +18192,7 @@
     <member type="way" ref="200972" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="straight" />
     <tag k="type" v="lanelet" />
@@ -18202,7 +18202,7 @@
     <member type="way" ref="200984" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18213,7 +18213,7 @@
     <member type="relation" ref="1270012683" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18224,7 +18224,7 @@
     <member type="relation" ref="1270012683" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18235,7 +18235,7 @@
     <member type="relation" ref="1270012702" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="left" />
     <tag k="type" v="lanelet" />
@@ -18245,7 +18245,7 @@
     <member type="way" ref="201072" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18254,7 +18254,7 @@
     <member type="way" ref="201087" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18263,7 +18263,7 @@
     <member type="way" ref="201101" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18272,7 +18272,7 @@
     <member type="way" ref="201385" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18281,7 +18281,7 @@
     <member type="way" ref="201126" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18290,7 +18290,7 @@
     <member type="way" ref="201143" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18299,7 +18299,7 @@
     <member type="way" ref="201161" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18308,7 +18308,7 @@
     <member type="way" ref="201178" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18318,7 +18318,7 @@
     <member type="relation" ref="1270012766" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18328,7 +18328,7 @@
     <member type="way" ref="201212" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18337,7 +18337,7 @@
     <member type="way" ref="201227" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18346,7 +18346,7 @@
     <member type="way" ref="201243" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18355,7 +18355,7 @@
     <member type="way" ref="201258" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18364,7 +18364,7 @@
     <member type="way" ref="201274" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18374,7 +18374,7 @@
     <member type="relation" ref="1270012745" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18385,7 +18385,7 @@
     <member type="relation" ref="1270012723" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18395,7 +18395,7 @@
     <member type="way" ref="201326" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18404,7 +18404,7 @@
     <member type="way" ref="201341" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18414,7 +18414,7 @@
     <member type="relation" ref="1270012663" role="regulatory_element" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="turn_direction" v="right" />
     <tag k="type" v="lanelet" />
@@ -18424,7 +18424,7 @@
     <member type="way" ref="201392" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18433,7 +18433,7 @@
     <member type="way" ref="201369" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18442,7 +18442,7 @@
     <member type="way" ref="201373" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18451,7 +18451,7 @@
     <member type="way" ref="201380" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18460,7 +18460,7 @@
     <member type="way" ref="201383" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18469,7 +18469,7 @@
     <member type="way" ref="201114" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18478,7 +18478,7 @@
     <member type="way" ref="201396" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18487,7 +18487,7 @@
     <member type="way" ref="201401" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18496,7 +18496,7 @@
     <member type="way" ref="201411" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18505,7 +18505,7 @@
     <member type="way" ref="201404" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18514,7 +18514,7 @@
     <member type="way" ref="201410" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18523,7 +18523,7 @@
     <member type="way" ref="201403" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18532,7 +18532,7 @@
     <member type="way" ref="200527" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18541,7 +18541,7 @@
     <member type="way" ref="200533" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18550,7 +18550,7 @@
     <member type="way" ref="201416" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18559,7 +18559,7 @@
     <member type="way" ref="201420" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18568,7 +18568,7 @@
     <member type="way" ref="201418" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18577,7 +18577,7 @@
     <member type="way" ref="201434" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18586,7 +18586,7 @@
     <member type="way" ref="201445" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18595,7 +18595,7 @@
     <member type="way" ref="201483" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18604,7 +18604,7 @@
     <member type="way" ref="201465" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18613,7 +18613,7 @@
     <member type="way" ref="201469" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18622,7 +18622,7 @@
     <member type="way" ref="201454" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18631,7 +18631,7 @@
     <member type="way" ref="201442" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18640,7 +18640,7 @@
     <member type="way" ref="201487" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18649,7 +18649,7 @@
     <member type="way" ref="201473" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18658,7 +18658,7 @@
     <member type="way" ref="201475" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18964,7 +18964,7 @@
     <member type="way" ref="202027" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18973,7 +18973,7 @@
     <member type="way" ref="202035" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18982,7 +18982,7 @@
     <member type="way" ref="202048" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -18991,7 +18991,7 @@
     <member type="way" ref="202139" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19000,7 +19000,7 @@
     <member type="way" ref="202145" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19009,7 +19009,7 @@
     <member type="way" ref="202151" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19018,7 +19018,7 @@
     <member type="way" ref="202157" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19027,7 +19027,7 @@
     <member type="way" ref="202725" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19036,7 +19036,7 @@
     <member type="way" ref="202731" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19045,7 +19045,7 @@
     <member type="way" ref="202737" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19054,7 +19054,7 @@
     <member type="way" ref="202743" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19063,7 +19063,7 @@
     <member type="way" ref="202749" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19072,7 +19072,7 @@
     <member type="way" ref="202755" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19081,7 +19081,7 @@
     <member type="way" ref="202760" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19090,7 +19090,7 @@
     <member type="way" ref="202802" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19099,7 +19099,7 @@
     <member type="way" ref="202806" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19108,7 +19108,7 @@
     <member type="way" ref="202810" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19117,7 +19117,7 @@
     <member type="way" ref="202814" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19126,7 +19126,7 @@
     <member type="way" ref="202818" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19135,7 +19135,7 @@
     <member type="way" ref="202822" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19144,7 +19144,7 @@
     <member type="way" ref="202826" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19153,7 +19153,7 @@
     <member type="way" ref="202868" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19162,7 +19162,7 @@
     <member type="way" ref="202872" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19171,7 +19171,7 @@
     <member type="way" ref="202876" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19180,7 +19180,7 @@
     <member type="way" ref="202880" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19189,7 +19189,7 @@
     <member type="way" ref="202884" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19198,7 +19198,7 @@
     <member type="way" ref="202888" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19207,7 +19207,7 @@
     <member type="way" ref="202892" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19216,7 +19216,7 @@
     <member type="way" ref="203067" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19225,7 +19225,7 @@
     <member type="way" ref="203082" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19234,7 +19234,7 @@
     <member type="way" ref="203094" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19243,7 +19243,7 @@
     <member type="way" ref="203100" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19252,7 +19252,7 @@
     <member type="way" ref="203107" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19261,7 +19261,7 @@
     <member type="way" ref="203225" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19270,7 +19270,7 @@
     <member type="way" ref="203235" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19279,7 +19279,7 @@
     <member type="way" ref="203245" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19288,7 +19288,7 @@
     <member type="way" ref="203249" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19297,7 +19297,7 @@
     <member type="way" ref="203253" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19306,7 +19306,7 @@
     <member type="way" ref="203367" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19315,7 +19315,7 @@
     <member type="way" ref="203377" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19324,7 +19324,7 @@
     <member type="way" ref="203387" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19333,7 +19333,7 @@
     <member type="way" ref="203391" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19342,7 +19342,7 @@
     <member type="way" ref="203395" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19351,7 +19351,7 @@
     <member type="way" ref="201498" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19360,7 +19360,7 @@
     <member type="way" ref="202252" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19369,7 +19369,7 @@
     <member type="way" ref="202258" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19378,7 +19378,7 @@
     <member type="way" ref="202264" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19387,7 +19387,7 @@
     <member type="way" ref="202268" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19396,7 +19396,7 @@
     <member type="way" ref="202272" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19405,7 +19405,7 @@
     <member type="way" ref="202276" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19414,7 +19414,7 @@
     <member type="way" ref="202280" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19423,7 +19423,7 @@
     <member type="way" ref="202284" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19432,7 +19432,7 @@
     <member type="way" ref="202288" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19441,7 +19441,7 @@
     <member type="way" ref="202298" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19450,7 +19450,7 @@
     <member type="way" ref="202318" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19459,7 +19459,7 @@
     <member type="way" ref="202342" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19468,7 +19468,7 @@
     <member type="way" ref="202364" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19477,7 +19477,7 @@
     <member type="way" ref="202388" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19486,7 +19486,7 @@
     <member type="way" ref="202409" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19495,7 +19495,7 @@
     <member type="way" ref="202424" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19504,7 +19504,7 @@
     <member type="way" ref="202434" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19513,7 +19513,7 @@
     <member type="way" ref="202440" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19522,7 +19522,7 @@
     <member type="way" ref="202445" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19531,7 +19531,7 @@
     <member type="way" ref="202447" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19540,7 +19540,7 @@
     <member type="way" ref="202461" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19549,7 +19549,7 @@
     <member type="way" ref="202479" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19558,7 +19558,7 @@
     <member type="way" ref="202497" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19567,7 +19567,7 @@
     <member type="way" ref="202513" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19576,7 +19576,7 @@
     <member type="way" ref="202530" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19585,7 +19585,7 @@
     <member type="way" ref="202540" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19594,7 +19594,7 @@
     <member type="way" ref="202548" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19603,7 +19603,7 @@
     <member type="way" ref="202552" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19612,7 +19612,7 @@
     <member type="way" ref="202556" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19621,7 +19621,7 @@
     <member type="way" ref="202558" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19630,7 +19630,7 @@
     <member type="way" ref="202569" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19639,7 +19639,7 @@
     <member type="way" ref="202586" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19648,7 +19648,7 @@
     <member type="way" ref="202602" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19657,7 +19657,7 @@
     <member type="way" ref="202619" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19666,7 +19666,7 @@
     <member type="way" ref="202634" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19675,7 +19675,7 @@
     <member type="way" ref="202644" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19684,7 +19684,7 @@
     <member type="way" ref="202653" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19693,7 +19693,7 @@
     <member type="way" ref="202657" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19702,7 +19702,7 @@
     <member type="way" ref="202661" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19711,7 +19711,7 @@
     <member type="way" ref="202665" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19720,7 +19720,7 @@
     <member type="way" ref="202671" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19729,7 +19729,7 @@
     <member type="way" ref="202677" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19738,7 +19738,7 @@
     <member type="way" ref="202683" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19747,7 +19747,7 @@
     <member type="way" ref="202689" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19756,7 +19756,7 @@
     <member type="way" ref="202695" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19765,7 +19765,7 @@
     <member type="way" ref="202701" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19774,7 +19774,7 @@
     <member type="way" ref="202707" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19783,7 +19783,7 @@
     <member type="way" ref="202713" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19792,7 +19792,7 @@
     <member type="way" ref="202719" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19801,7 +19801,7 @@
     <member type="way" ref="202762" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19810,7 +19810,7 @@
     <member type="way" ref="202766" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19819,7 +19819,7 @@
     <member type="way" ref="202770" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19828,7 +19828,7 @@
     <member type="way" ref="202774" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19837,7 +19837,7 @@
     <member type="way" ref="202778" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19846,7 +19846,7 @@
     <member type="way" ref="202782" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19855,7 +19855,7 @@
     <member type="way" ref="202786" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19864,7 +19864,7 @@
     <member type="way" ref="202790" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19873,7 +19873,7 @@
     <member type="way" ref="202794" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19882,7 +19882,7 @@
     <member type="way" ref="202798" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19891,7 +19891,7 @@
     <member type="way" ref="202828" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19900,7 +19900,7 @@
     <member type="way" ref="202832" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19909,7 +19909,7 @@
     <member type="way" ref="202836" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19918,7 +19918,7 @@
     <member type="way" ref="202840" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19927,7 +19927,7 @@
     <member type="way" ref="202844" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19936,7 +19936,7 @@
     <member type="way" ref="202848" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19945,7 +19945,7 @@
     <member type="way" ref="202852" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19954,7 +19954,7 @@
     <member type="way" ref="202856" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19963,7 +19963,7 @@
     <member type="way" ref="202860" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19972,7 +19972,7 @@
     <member type="way" ref="202864" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19981,7 +19981,7 @@
     <member type="way" ref="202896" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19990,7 +19990,7 @@
     <member type="way" ref="202902" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -19999,7 +19999,7 @@
     <member type="way" ref="202908" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20008,7 +20008,7 @@
     <member type="way" ref="202916" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20017,7 +20017,7 @@
     <member type="way" ref="202928" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20026,7 +20026,7 @@
     <member type="way" ref="202946" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20035,7 +20035,7 @@
     <member type="way" ref="202970" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20044,7 +20044,7 @@
     <member type="way" ref="202995" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20053,7 +20053,7 @@
     <member type="way" ref="203018" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20062,7 +20062,7 @@
     <member type="way" ref="203045" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20071,7 +20071,7 @@
     <member type="way" ref="203113" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20080,7 +20080,7 @@
     <member type="way" ref="203117" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20089,7 +20089,7 @@
     <member type="way" ref="203121" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20098,7 +20098,7 @@
     <member type="way" ref="203125" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20107,7 +20107,7 @@
     <member type="way" ref="203132" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20116,7 +20116,7 @@
     <member type="way" ref="203142" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20125,7 +20125,7 @@
     <member type="way" ref="203159" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20134,7 +20134,7 @@
     <member type="way" ref="203177" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20143,7 +20143,7 @@
     <member type="way" ref="203192" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20152,7 +20152,7 @@
     <member type="way" ref="203208" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20161,7 +20161,7 @@
     <member type="way" ref="203259" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20170,7 +20170,7 @@
     <member type="way" ref="203263" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20179,7 +20179,7 @@
     <member type="way" ref="203267" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20188,7 +20188,7 @@
     <member type="way" ref="203271" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20197,7 +20197,7 @@
     <member type="way" ref="203279" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20206,7 +20206,7 @@
     <member type="way" ref="203289" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20215,7 +20215,7 @@
     <member type="way" ref="203302" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20224,7 +20224,7 @@
     <member type="way" ref="203318" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20233,7 +20233,7 @@
     <member type="way" ref="203335" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20242,7 +20242,7 @@
     <member type="way" ref="203350" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20251,7 +20251,7 @@
     <member type="way" ref="203403" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20260,7 +20260,7 @@
     <member type="way" ref="203409" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20269,7 +20269,7 @@
     <member type="way" ref="203413" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20278,7 +20278,7 @@
     <member type="way" ref="203417" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20287,7 +20287,7 @@
     <member type="way" ref="203421" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20296,7 +20296,7 @@
     <member type="way" ref="203425" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20305,7 +20305,7 @@
     <member type="way" ref="203429" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20314,7 +20314,7 @@
     <member type="way" ref="203433" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20323,7 +20323,7 @@
     <member type="way" ref="203439" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20332,7 +20332,7 @@
     <member type="way" ref="203445" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20341,7 +20341,7 @@
     <member type="way" ref="203451" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20350,7 +20350,7 @@
     <member type="way" ref="203457" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20359,7 +20359,7 @@
     <member type="way" ref="203463" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20368,7 +20368,7 @@
     <member type="way" ref="203469" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20377,7 +20377,7 @@
     <member type="way" ref="203475" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20386,7 +20386,7 @@
     <member type="way" ref="203481" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20395,7 +20395,7 @@
     <member type="way" ref="203485" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20404,7 +20404,7 @@
     <member type="way" ref="203489" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20413,7 +20413,7 @@
     <member type="way" ref="203493" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20422,7 +20422,7 @@
     <member type="way" ref="203497" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20431,7 +20431,7 @@
     <member type="way" ref="203501" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20440,7 +20440,7 @@
     <member type="way" ref="203505" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20449,7 +20449,7 @@
     <member type="way" ref="203509" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20458,7 +20458,7 @@
     <member type="way" ref="203513" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20467,7 +20467,7 @@
     <member type="way" ref="203517" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20476,7 +20476,7 @@
     <member type="way" ref="203521" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20485,7 +20485,7 @@
     <member type="way" ref="203525" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20494,7 +20494,7 @@
     <member type="way" ref="203529" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20503,7 +20503,7 @@
     <member type="way" ref="203533" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20512,7 +20512,7 @@
     <member type="way" ref="203537" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20521,7 +20521,7 @@
     <member type="way" ref="203541" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20530,7 +20530,7 @@
     <member type="way" ref="203545" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20539,7 +20539,7 @@
     <member type="way" ref="203549" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20548,7 +20548,7 @@
     <member type="way" ref="203553" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20557,7 +20557,7 @@
     <member type="way" ref="203557" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20566,7 +20566,7 @@
     <member type="way" ref="203561" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20575,7 +20575,7 @@
     <member type="way" ref="203565" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20584,7 +20584,7 @@
     <member type="way" ref="203569" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20593,7 +20593,7 @@
     <member type="way" ref="203573" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20602,7 +20602,7 @@
     <member type="way" ref="203577" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20611,7 +20611,7 @@
     <member type="way" ref="203780" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20620,7 +20620,7 @@
     <member type="way" ref="203785" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20629,7 +20629,7 @@
     <member type="way" ref="203787" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20638,7 +20638,7 @@
     <member type="way" ref="203791" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20647,7 +20647,7 @@
     <member type="way" ref="203793" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20656,7 +20656,7 @@
     <member type="way" ref="203797" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20665,7 +20665,7 @@
     <member type="way" ref="203799" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20674,7 +20674,7 @@
     <member type="way" ref="203803" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20683,7 +20683,7 @@
     <member type="way" ref="203747" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20692,7 +20692,7 @@
     <member type="way" ref="203758" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20701,7 +20701,7 @@
     <member type="way" ref="203590" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20710,7 +20710,7 @@
     <member type="way" ref="203611" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20719,7 +20719,7 @@
     <member type="way" ref="203617" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20728,7 +20728,7 @@
     <member type="way" ref="203635" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20737,7 +20737,7 @@
     <member type="way" ref="203641" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20746,7 +20746,7 @@
     <member type="way" ref="203659" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20755,7 +20755,7 @@
     <member type="way" ref="203807" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20764,7 +20764,7 @@
     <member type="way" ref="203814" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20773,7 +20773,7 @@
     <member type="way" ref="203821" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20782,7 +20782,7 @@
     <member type="way" ref="203825" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20791,7 +20791,7 @@
     <member type="way" ref="203831" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20800,7 +20800,7 @@
     <member type="way" ref="203835" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20809,7 +20809,7 @@
     <member type="way" ref="202166" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20818,7 +20818,7 @@
     <member type="way" ref="202181" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20827,7 +20827,7 @@
     <member type="way" ref="202192" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20836,7 +20836,7 @@
     <member type="way" ref="202202" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20845,7 +20845,7 @@
     <member type="way" ref="202210" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20854,7 +20854,7 @@
     <member type="way" ref="202220" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20863,7 +20863,7 @@
     <member type="way" ref="202230" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20872,7 +20872,7 @@
     <member type="way" ref="202240" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20881,7 +20881,7 @@
     <member type="way" ref="201682" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20890,7 +20890,7 @@
     <member type="way" ref="201688" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20899,7 +20899,7 @@
     <member type="way" ref="201694" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20908,7 +20908,7 @@
     <member type="way" ref="201701" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20917,7 +20917,7 @@
     <member type="way" ref="201707" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20926,7 +20926,7 @@
     <member type="way" ref="201713" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20935,7 +20935,7 @@
     <member type="way" ref="201718" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20944,7 +20944,7 @@
     <member type="way" ref="201638" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20953,7 +20953,7 @@
     <member type="way" ref="201644" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20962,7 +20962,7 @@
     <member type="way" ref="201652" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20971,7 +20971,7 @@
     <member type="way" ref="201658" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20980,7 +20980,7 @@
     <member type="way" ref="201664" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20989,7 +20989,7 @@
     <member type="way" ref="201673" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -20998,7 +20998,7 @@
     <member type="way" ref="201678" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21007,7 +21007,7 @@
     <member type="way" ref="201970" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21016,7 +21016,7 @@
     <member type="way" ref="201978" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21025,7 +21025,7 @@
     <member type="way" ref="201984" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21034,7 +21034,7 @@
     <member type="way" ref="201990" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21043,7 +21043,7 @@
     <member type="way" ref="201996" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21052,7 +21052,7 @@
     <member type="way" ref="202002" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21061,7 +21061,7 @@
     <member type="way" ref="202008" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21070,7 +21070,7 @@
     <member type="way" ref="202014" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21079,7 +21079,7 @@
     <member type="way" ref="202020" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21088,7 +21088,7 @@
     <member type="way" ref="202074" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21097,7 +21097,7 @@
     <member type="way" ref="202092" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21106,7 +21106,7 @@
     <member type="way" ref="202100" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21115,7 +21115,7 @@
     <member type="way" ref="202107" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21124,7 +21124,7 @@
     <member type="way" ref="202115" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21133,7 +21133,7 @@
     <member type="way" ref="202121" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21142,7 +21142,7 @@
     <member type="way" ref="202127" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21151,7 +21151,7 @@
     <member type="way" ref="202133" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21160,7 +21160,7 @@
     <member type="way" ref="201513" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21169,7 +21169,7 @@
     <member type="way" ref="201529" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21178,7 +21178,7 @@
     <member type="way" ref="201539" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21187,7 +21187,7 @@
     <member type="way" ref="201546" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21196,7 +21196,7 @@
     <member type="way" ref="201556" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21205,7 +21205,7 @@
     <member type="way" ref="201566" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21214,7 +21214,7 @@
     <member type="way" ref="201572" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21223,7 +21223,7 @@
     <member type="way" ref="201578" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21232,7 +21232,7 @@
     <member type="way" ref="201584" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21241,7 +21241,7 @@
     <member type="way" ref="201722" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21250,7 +21250,7 @@
     <member type="way" ref="201728" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21259,7 +21259,7 @@
     <member type="way" ref="201734" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21268,7 +21268,7 @@
     <member type="way" ref="201740" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21277,7 +21277,7 @@
     <member type="way" ref="201746" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21286,7 +21286,7 @@
     <member type="way" ref="201622" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21295,7 +21295,7 @@
     <member type="way" ref="201752" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21304,7 +21304,7 @@
     <member type="way" ref="201758" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21313,7 +21313,7 @@
     <member type="way" ref="201764" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21322,7 +21322,7 @@
     <member type="way" ref="201770" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21331,7 +21331,7 @@
     <member type="way" ref="201776" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21340,7 +21340,7 @@
     <member type="way" ref="201782" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21349,7 +21349,7 @@
     <member type="way" ref="201788" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21358,7 +21358,7 @@
     <member type="way" ref="201793" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21367,7 +21367,7 @@
     <member type="way" ref="201591" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21376,7 +21376,7 @@
     <member type="way" ref="201599" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21385,7 +21385,7 @@
     <member type="way" ref="201605" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21394,7 +21394,7 @@
     <member type="way" ref="201611" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21403,7 +21403,7 @@
     <member type="way" ref="201798" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21412,7 +21412,7 @@
     <member type="way" ref="201806" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21421,7 +21421,7 @@
     <member type="way" ref="203728" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21430,7 +21430,7 @@
     <member type="way" ref="203735" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21439,7 +21439,7 @@
     <member type="way" ref="203740" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21448,7 +21448,7 @@
     <member type="way" ref="201821" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21457,7 +21457,7 @@
     <member type="way" ref="201847" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21466,7 +21466,7 @@
     <member type="way" ref="201874" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21475,7 +21475,7 @@
     <member type="way" ref="201899" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21484,7 +21484,7 @@
     <member type="way" ref="201925" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21493,7 +21493,7 @@
     <member type="way" ref="201951" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21502,7 +21502,7 @@
     <member type="way" ref="203764" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21511,7 +21511,7 @@
     <member type="way" ref="203773" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21520,7 +21520,7 @@
     <member type="way" ref="203843" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21529,7 +21529,7 @@
     <member type="way" ref="203849" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21538,7 +21538,7 @@
     <member type="way" ref="203854" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21547,7 +21547,7 @@
     <member type="way" ref="203683" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21556,7 +21556,7 @@
     <member type="way" ref="203858" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21565,7 +21565,7 @@
     <member type="way" ref="203863" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21574,7 +21574,7 @@
     <member type="way" ref="203873" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21583,7 +21583,7 @@
     <member type="way" ref="203878" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21592,7 +21592,7 @@
     <member type="way" ref="203889" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21601,7 +21601,7 @@
     <member type="way" ref="203897" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21610,7 +21610,7 @@
     <member type="way" ref="203904" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21619,7 +21619,7 @@
     <member type="way" ref="203673" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21628,7 +21628,7 @@
     <member type="way" ref="203671" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21637,7 +21637,7 @@
     <member type="way" ref="203955" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21646,7 +21646,7 @@
     <member type="way" ref="203960" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21655,7 +21655,7 @@
     <member type="way" ref="203962" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21664,7 +21664,7 @@
     <member type="way" ref="203966" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21673,7 +21673,7 @@
     <member type="way" ref="203856" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21682,7 +21682,7 @@
     <member type="way" ref="203862" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21691,7 +21691,7 @@
     <member type="way" ref="203871" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21700,7 +21700,7 @@
     <member type="way" ref="203877" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21709,7 +21709,7 @@
     <member type="way" ref="203908" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21718,7 +21718,7 @@
     <member type="way" ref="203913" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21727,7 +21727,7 @@
     <member type="way" ref="203920" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21736,7 +21736,7 @@
     <member type="way" ref="203934" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21745,7 +21745,7 @@
     <member type="way" ref="203716" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21754,7 +21754,7 @@
     <member type="way" ref="203718" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21763,7 +21763,7 @@
     <member type="way" ref="203940" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21772,7 +21772,7 @@
     <member type="way" ref="203945" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21781,7 +21781,7 @@
     <member type="way" ref="203689" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21790,7 +21790,7 @@
     <member type="way" ref="203694" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21799,7 +21799,7 @@
     <member type="way" ref="203667" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21808,7 +21808,7 @@
     <member type="way" ref="203938" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21817,7 +21817,7 @@
     <member type="way" ref="203944" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21826,7 +21826,7 @@
     <member type="way" ref="203970" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21835,7 +21835,7 @@
     <member type="way" ref="203975" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21844,7 +21844,7 @@
     <member type="way" ref="203977" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21853,7 +21853,7 @@
     <member type="way" ref="203981" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21862,7 +21862,7 @@
     <member type="way" ref="203985" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21871,7 +21871,7 @@
     <member type="way" ref="203994" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21880,7 +21880,7 @@
     <member type="way" ref="204006" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21889,7 +21889,7 @@
     <member type="way" ref="203698" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21898,7 +21898,7 @@
     <member type="way" ref="203704" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21907,7 +21907,7 @@
     <member type="way" ref="203708" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21916,7 +21916,7 @@
     <member type="way" ref="203712" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21925,7 +21925,7 @@
     <member type="way" ref="204114" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21934,7 +21934,7 @@
     <member type="way" ref="204126" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21943,7 +21943,7 @@
     <member type="way" ref="204143" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21952,7 +21952,7 @@
     <member type="way" ref="204147" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21961,7 +21961,7 @@
     <member type="way" ref="204155" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21970,7 +21970,7 @@
     <member type="way" ref="204209" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21979,7 +21979,7 @@
     <member type="way" ref="204227" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21988,7 +21988,7 @@
     <member type="way" ref="204017" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -21997,7 +21997,7 @@
     <member type="way" ref="204026" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22006,7 +22006,7 @@
     <member type="way" ref="204081" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22015,7 +22015,7 @@
     <member type="way" ref="204093" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22024,7 +22024,7 @@
     <member type="way" ref="204105" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22033,7 +22033,7 @@
     <member type="way" ref="204110" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22042,7 +22042,7 @@
     <member type="way" ref="204166" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22051,7 +22051,7 @@
     <member type="way" ref="204177" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22060,7 +22060,7 @@
     <member type="way" ref="204180" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22069,7 +22069,7 @@
     <member type="way" ref="204191" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22078,7 +22078,7 @@
     <member type="way" ref="204053" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22087,7 +22087,7 @@
     <member type="way" ref="204073" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22096,7 +22096,7 @@
     <member type="way" ref="204035" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22105,7 +22105,7 @@
     <member type="way" ref="204042" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22114,7 +22114,7 @@
     <member type="way" ref="204268" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22123,7 +22123,7 @@
     <member type="way" ref="204273" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22132,7 +22132,7 @@
     <member type="way" ref="204253" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22141,7 +22141,7 @@
     <member type="way" ref="204258" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22150,7 +22150,7 @@
     <member type="way" ref="204251" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22159,7 +22159,7 @@
     <member type="way" ref="204257" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22168,7 +22168,7 @@
     <member type="way" ref="204343" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22177,7 +22177,7 @@
     <member type="way" ref="204353" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22186,7 +22186,7 @@
     <member type="way" ref="204359" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22195,7 +22195,7 @@
     <member type="way" ref="204372" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22204,7 +22204,7 @@
     <member type="way" ref="204346" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22213,7 +22213,7 @@
     <member type="way" ref="204355" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22222,7 +22222,7 @@
     <member type="way" ref="204363" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22231,7 +22231,7 @@
     <member type="way" ref="204373" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22240,7 +22240,7 @@
     <member type="way" ref="204238" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22249,7 +22249,7 @@
     <member type="way" ref="204246" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22258,7 +22258,7 @@
     <member type="way" ref="204277" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22267,7 +22267,7 @@
     <member type="way" ref="204285" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22276,7 +22276,7 @@
     <member type="way" ref="204309" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22285,7 +22285,7 @@
     <member type="way" ref="204319" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22294,7 +22294,7 @@
     <member type="way" ref="204293" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22303,7 +22303,7 @@
     <member type="way" ref="204298" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22312,7 +22312,7 @@
     <member type="way" ref="204327" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
@@ -22321,7 +22321,7 @@
     <member type="way" ref="204333" role="right" />
     <tag k="location" v="urban" />
     <tag k="region" v="kr" />
-    <tag k="speed_limit" v="60km/h" />
+    <tag k="speed_limit" v="100km/h" />
     <tag k="subtype" v="road" />
     <tag k="type" v="lanelet" />
   </relation>
