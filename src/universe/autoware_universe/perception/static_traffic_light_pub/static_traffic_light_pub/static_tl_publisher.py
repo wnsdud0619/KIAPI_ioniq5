@@ -23,12 +23,16 @@ class StaticTrafficLightPublisher(Node):
         self.timer = self.create_timer(1.0, self.timer_callback)
 
         self.group_ids = [
-            1240011492,
-            1240011582,
-            1240011444,
-            1240011468,
-            1240011402
-        ]
+            1270012619,
+            1270012642,
+            1270012633,
+            1270012683,
+            1270012702,
+            1270012723,
+            1270012745,
+            1270012766,
+            1270012787,
+            1270012809]
 
         self.get_logger().info('Static Traffic Light Publisher started (1 Hz)')
 

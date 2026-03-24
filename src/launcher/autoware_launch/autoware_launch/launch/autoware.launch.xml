@@ -119,8 +119,8 @@
     </include>
   </group>
 
-  <!-- Static_TL 시나리오 구간 고정된 신호등 초록불 자동 퍼블리쉬-->
-  <node pkg="static_traffic_light_pub" exec="static_tl_publisher" name="static_tl_publisher" output="screen" if="$(var static_TL)"/>
+  <!-- Static_TL 시나리오 구간 고정된 신호등 초록불 자동 퍼블리쉬
+  <node pkg="static_traffic_light_pub" exec="static_tl_publisher" name="static_tl_publisher" output="screen" if="$(var static_TL)"/>-->
 
   <!-- Planning -->
   <group if="$(var launch_planning)">

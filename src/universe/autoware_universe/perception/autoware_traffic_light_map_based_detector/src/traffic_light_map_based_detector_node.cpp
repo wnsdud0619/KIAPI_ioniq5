@@ -202,6 +202,8 @@ void MapBasedDetector::cameraInfoCallback(
   const sensor_msgs::msg::CameraInfo::ConstSharedPtr input_msg)
 {
   if (all_traffic_lights_ptr_ == nullptr && route_traffic_lights_ptr_ == nullptr) {
+    //std::cout<<"*************************************************"<<std::endl;
+    //std::cout<<"info0"<<std::endl;
     return;
   }
 
@@ -213,6 +215,9 @@ void MapBasedDetector::cameraInfoCallback(
   tier4_perception_msgs::msg::TrafficLightRoiArray expect_roi_msg;
   expect_roi_msg = output_msg;
 
+  //std::cout<<"*************************************************"<<std::endl;
+  //std::cout<<"info1"<<std::endl;
+
   /* Camera pose in the period*/
   std::vector<tf2::Transform> tf_map2camera_vec;
   rclcpp::Time t1 = rclcpp::Time(input_msg->header.stamp) +
@@ -220,9 +225,12 @@ void MapBasedDetector::cameraInfoCallback(
   rclcpp::Time t2 = rclcpp::Time(input_msg->header.stamp) +
                     rclcpp::Duration::from_seconds(config_.max_timestamp_offset);
   rclcpp::Duration interval = rclcpp::Duration::from_seconds(0.01);
+
   for (auto t = t1; t <= t2; t += interval) {
     tf2::Transform tf;
     if (getTransform(t, input_msg->header.frame_id, tf)) {
+      //std::cout<<"*************************************************"<<std::endl;
+      //std::cout<<"info3"<<std::endl;
       tf_map2camera_vec.push_back(tf);
     }
   }
@@ -232,10 +240,14 @@ void MapBasedDetector::cameraInfoCallback(
         rclcpp::Time(input_msg->header.stamp), input_msg->header.frame_id, tf_map2camera)) {
     RCLCPP_WARN_THROTTLE(
       get_logger(), *get_clock(), 5000, "cannot get transform from map frame to camera frame");
+      //std::cout<<"*************************************************"<<std::endl;
+      //std::cout<<"info4"<<std::endl;
     return;
   }
   if (tf_map2camera_vec.empty()) {
     tf_map2camera_vec.push_back(tf_map2camera);
+    //std::cout<<"*************************************************"<<std::endl;
+    //std::cout<<"info5"<<std::endl;
   }
 
   /*
@@ -245,14 +257,20 @@ void MapBasedDetector::cameraInfoCallback(
   std::vector<lanelet::ConstLineString3d> visible_traffic_lights;
   // If get a route, use only traffic lights on the route.
   if (route_traffic_lights_ptr_ != nullptr) {
+    //std::cout<<"*************************************************"<<std::endl;
+    //std::cout<<"info6"<<std::endl;
     getVisibleTrafficLights(
       *route_traffic_lights_ptr_, tf_map2camera_vec, pinhole_camera_model, visible_traffic_lights);
     // If don't get a route, use the traffic lights around ego vehicle.
   } else if (all_traffic_lights_ptr_ != nullptr) {
+    //std::cout<<"*************************************************"<<std::endl;
+    //std::cout<<"info7"<<std::endl;
     getVisibleTrafficLights(
       *all_traffic_lights_ptr_, tf_map2camera_vec, pinhole_camera_model, visible_traffic_lights);
     // This shouldn't run.
   } else {
+    //std::cout<<"*************************************************"<<std::endl;
+    //std::cout<<"info8"<<std::endl;
     return;
   }
 
@@ -397,6 +415,8 @@ void MapBasedDetector::mapCallback(
   const autoware_map_msgs::msg::LaneletMapBin::ConstSharedPtr input_msg)
 {
   lanelet_map_ptr_ = std::make_shared<lanelet::LaneletMap>();
+  std::cout<<"*************************************************"<<std::endl;
+  std::cout<<"map callback"<<std::endl;
 
   lanelet::utils::conversion::fromBinMsg(*input_msg, lanelet_map_ptr_);
   lanelet::ConstLanelets all_lanelets = lanelet::utils::query::laneletLayer(lanelet_map_ptr_);
@@ -441,6 +461,8 @@ void MapBasedDetector::mapCallback(
 void MapBasedDetector::routeCallback(
   const autoware_planning_msgs::msg::LaneletRoute::ConstSharedPtr input_msg)
 {
+  std::cout<<"*************************************************"<<std::endl;
+  std::cout<<"routecallback"<<std::endl;
   if (lanelet_map_ptr_ == nullptr) {
     RCLCPP_WARN(get_logger(), "cannot set traffic light in route because don't receive map");
     return;
@@ -508,11 +530,12 @@ void MapBasedDetector::getVisibleTrafficLights(
   std::vector<lanelet::ConstLineString3d> & visible_traffic_lights) const
 {
   for (const auto & traffic_light : all_traffic_lights) {
-    if (
+    /*if (
       traffic_light.hasAttribute("subtype") == false ||
       traffic_light.attribute("subtype").value() == "solid") {
+        std::cout<<"subtype continue"<<std::endl;
       continue;
-    }
+    }*/
     // set different max angle range for ped and car traffic light
     double max_angle_range;
     if (pedestrian_tl_id_.find(traffic_light.id()) != pedestrian_tl_id_.end()) {
@@ -532,6 +555,7 @@ void MapBasedDetector::getVisibleTrafficLights(
     // If under any tf the tl is visible, keep it
     for (const auto & tf_map2camera : tf_map2camera_vec) {
       if (!isInDistanceRange(tl_center, tf_map2camera.getOrigin(), config_.max_detection_range)) {
+        std::cout<<"Range continue"<<std::endl;
         continue;
       }
 
@@ -546,6 +570,7 @@ void MapBasedDetector::getVisibleTrafficLights(
       double camera_yaw = std::atan2(camera_z_dir.y(), camera_z_dir.x());
       camera_yaw = autoware::universe_utils::normalizeRadian(camera_yaw);
       if (!isInAngleRange(tl_yaw, camera_yaw, max_angle_range)) {
+        std::cout<<"Range continue"<<std::endl;
         continue;
       }
 
@@ -557,6 +582,7 @@ void MapBasedDetector::getVisibleTrafficLights(
       if (
         !isInImageFrame(pinhole_camera_model, tf_camera2tltl) &&
         !isInImageFrame(pinhole_camera_model, tf_camera2tlbr)) {
+          std::cout<<"Frame continue"<<std::endl;
         continue;
       }
       visible_traffic_lights.push_back(traffic_light);
