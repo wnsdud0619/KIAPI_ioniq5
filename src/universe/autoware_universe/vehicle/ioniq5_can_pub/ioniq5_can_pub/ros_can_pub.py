@@ -7,6 +7,7 @@ import threading
 import queue
 import asyncio
 from autoware_vehicle_msgs.msg import *
+from tier4_vehicle_msgs.msg import ActuationStatusStamped, ActuationStatus  # 추가된 메시지 임포트
 from rclpy.clock import Clock
 from rclpy.executors import MultiThreadedExecutor
 import math
@@ -31,6 +32,14 @@ class CanReceiver(Node):
         #self.pub_VelocityReport = self.create_publisher(VelocityReport, '/vehicle/status/velocity_status', 10)
         self.pub_HazardLightsReport = self.create_publisher(HazardLightsReport, '/vehicle/status/hazard_lights_status', 10)
         self.pub_TurnIndicatorsReport = self.create_publisher(TurnIndicatorsReport, '/vehicle/status/turn_indicators_status', 10)
+        
+        # ActuationStatus 퍼블리셔 추가
+        self.pub_ActuationStatus = self.create_publisher(ActuationStatusStamped, '/vehicle/status/actuation_status', 10)
+
+        # ActuationStatus를 위한 최신 상태값 저장 변수
+        self.current_accel_status = 0.0
+        self.current_brake_status = 0.0
+        self.current_steer_status = 0.0
 
         # CAN 인터페이스 설정 (ThreadSafeBus 사용)
         self.bus = can.ThreadSafeBus(interface='socketcan', channel='can0')
@@ -85,40 +94,74 @@ class CanReceiver(Node):
             # 메시지 처리
             if message.arbitration_id == 0x710:
                 SteeringReport_msg = SteeringReport()
-                SteeringReport_msg.steering_tire_angle = self.deg_to_rad(decoded_signals.get('StrAng', 0))
+                # StrAng를 Steering_angle로 변경
+                steering_angle_raw = decoded_signals.get('Steering_angle', 0)
+                
+                SteeringReport_msg.steering_tire_angle = self.deg_to_rad(steering_angle_raw)
                 SteeringReport_msg.steering_tire_angle = -SteeringReport_msg.steering_tire_angle / 13.5
                 SteeringReport_msg.stamp = header.stamp
                 self.pub_SteeringReport.publish(SteeringReport_msg)
+
+                # ActuationStatus의 steer_status 업데이트 및 퍼블리시
+                self.current_steer_status = steering_angle_raw
+                self.publish_actuation_status(header.stamp)
 
             elif message.arbitration_id == 0x711:
                 GearReport_msg = GearReport()
                 gear_disp = decoded_signals.get('Gear_Disp', 0)
                 gear_value = getattr(gear_disp, "value", gear_disp)
                 GearReport_msg.report = Gear_DISP_dict.get(gear_value, 0) 
-                
-                #GearReport_msg.report = Gear_DISP_dict.get(gear_disp, 0)
                 GearReport_msg.stamp = header.stamp
                 self.pub_GearReport.publish(GearReport_msg)
 
-            #elif message.arbitration_id == 0x713:
-                #VelocityReport_msg = VelocityReport()
-                #VelocityReport_msg.longitudinal_velocity = decoded_signals.get('Long_Accel', 0)
-                #VelocityReport_msg.lateral_velocity = decoded_signals.get('Lat_Accel', 0)
-                #VelocityReport_msg.heading_rate = decoded_signals.get('Yaw_Rate', 0)
-                #VelocityReport_msg.header = header
-                #self.pub_VelocityReport.publish(VelocityReport_msg)
-
-            elif message.arbitration_id == 0x715:
+            elif message.arbitration_id == 0x714:
+                # 1. 방향지시등/비상등 상태 처리
                 HazardLightsReport_msg = HazardLightsReport()
                 TurnIndicatorsReport_msg = TurnIndicatorsReport()
 
-                #msg에 can값 넣어서 변하도록 해야함 현재는 기본값만 넣음
-                HazardLightsReport_msg.report = 1  # DISABLE = 1, ENABLE = 2
-                TurnIndicatorsReport_msg.report = 1 # No command = 0, DISABLE = 1, ENABLE_LEFT = 2, ENABLE_RIGHT = 3
+                turn_sig_raw = decoded_signals.get('Turn_sig2', 0)
+                turn_sig_val = getattr(turn_sig_raw, "value", turn_sig_raw)
+
+                hazard_report = 1
+                turn_report = 1
+
+                if turn_sig_val == 1:
+                    turn_report = 2      # ENABLE_LEFT
+                elif turn_sig_val == 4:
+                    turn_report = 3      # ENABLE_RIGHT
+                elif turn_sig_val == 5:
+                    hazard_report = 2    # Hazard ENABLE
+
+                HazardLightsReport_msg.report = hazard_report
+                TurnIndicatorsReport_msg.report = turn_report
+
                 HazardLightsReport_msg.stamp = header.stamp
                 TurnIndicatorsReport_msg.stamp = header.stamp
+                
                 self.pub_HazardLightsReport.publish(HazardLightsReport_msg)
                 self.pub_TurnIndicatorsReport.publish(TurnIndicatorsReport_msg)
+
+                # 2. Accel / Brake 퍼센트 값 처리 및 ActuationStatus 퍼블리시
+                accel_raw = decoded_signals.get('Acc_pedal_percent', 0)
+                brake_raw = decoded_signals.get('Brk_pedal_percent', 0)
+
+                self.current_accel_status = getattr(accel_raw, "value", accel_raw)
+                self.current_brake_status = getattr(brake_raw, "value", brake_raw)
+                
+                self.publish_actuation_status(header.stamp)
+
+    def publish_actuation_status(self, stamp):
+        """최신 값을 모아 ActuationStatusStamped 메시지로 퍼블리시"""
+        actuation_msg = ActuationStatusStamped()
+        actuation_msg.header.frame_id = 'base_link'
+        actuation_msg.header.stamp = stamp
+        
+        # ROS 2 float64 타입에 맞게 형변환
+        actuation_msg.status.accel_status = float(self.current_accel_status)
+        actuation_msg.status.brake_status = float(self.current_brake_status)
+        actuation_msg.status.steer_status = float(self.current_steer_status)
+        
+        self.pub_ActuationStatus.publish(actuation_msg)
 
     def decode_message(self, message):
         """캐싱된 DBC 메시지를 사용하여 디코딩"""

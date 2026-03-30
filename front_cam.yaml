@@ -1,0 +1,14 @@
+/**:
+  ros__parameters:
+    # 필수 입력
+    serial_number: "23025414" 
+    camera_type: "blackfly_s"
+    
+    # 해상도 및 포맷
+    pixel_format: "BayerRG8"     # 흑백이면 "Mono8"
+    image_width: 1920            
+    image_height: 1080
+    
+    # 프레임 속도 (FPS) 설정
+    acquisition_frame_rate_enable: true
+    acquisition_frame_rate: 30.0

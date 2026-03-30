@@ -37,7 +37,7 @@ class ControlCmdConverter(Node):
         # --- Longitudinal 처리 ---
         # 여기서는 acceleration 값을 사용 (is_defined_acceleration 확인)
         acc_cmd = msg.longitudinal.acceleration
-        acc_cmd = max(min(acc_cmd, 1.0), -2.0)
+        acc_cmd = max(min(acc_cmd, 2.0), -3.0)
 
 
         # KIAPI 메시지 생성
