@@ -145,8 +145,10 @@ class CanReceiver(Node):
                 accel_raw = decoded_signals.get('Acc_pedal_percent', 0)
                 brake_raw = decoded_signals.get('Brk_pedal_percent', 0)
 
-                self.current_accel_status = getattr(accel_raw, "value", accel_raw)
-                self.current_brake_status = getattr(brake_raw, "value", brake_raw)
+                #self.current_accel_status = getattr(accel_raw, "value", accel_raw)
+                #self.current_brake_status = getattr(brake_raw, "value", brake_raw)                
+                self.current_accel_status = float(getattr(accel_raw, "value", accel_raw)) / 100.0
+                self.current_brake_status = float(getattr(brake_raw, "value", brake_raw)) / 100.0
                 
                 self.publish_actuation_status(header.stamp)
 
