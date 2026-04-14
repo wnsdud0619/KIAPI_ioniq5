@@ -132,7 +132,8 @@
             "valid_estimated_vel_max": {
               "type": "number",
               "description": "Maximum value of valid speed estimation results in speed estimation using a point cloud [m/s]",
-              "default": "20.0"
+              //"default": "20.0"
+              "default": "30.0"
             },
             "valid_estimated_vel_min": {
               "type": "number",

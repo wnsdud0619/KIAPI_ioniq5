@@ -137,8 +137,8 @@
       <arg name="module_preset" value="$(var control_module_preset)"/>      
     </include>
     <!-- CAN데이터 받아서 pub -->
-    <node pkg="ioniq5_d2x_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>
-    <!--<node pkg="ioniq5_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>-->
+    <!--<node pkg="ioniq5_d2x_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>-->
+    <node pkg="ioniq5_can_pub" exec="can_receiver_node" name="can_receiver" output="screen"/>
     <!-- QT ROS2 Interface Node -->
     <node pkg="qt_ros2_interface" exec="qt_ros2_node" name="qt_ros2_interface" output="screen"/>
     <!-- Control Command Converter Node  -->

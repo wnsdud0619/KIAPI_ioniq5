@@ -9,7 +9,7 @@
 
   <!-- debug flags -->
   <arg name="publish_debug_trajs" default="true"/>
-  <arg name="velocity_smoother_type" default="JerkFiltered"/>
+  <arg name="velocity_smoother_type" default="Analytical"/>
   <!-- Analytical, JerkFiltered, L2, or Linf -->
 
   <arg name="param_path" default="$(find-pkg-share autoware_velocity_smoother)/config/default_velocity_smoother.param.yaml"/>

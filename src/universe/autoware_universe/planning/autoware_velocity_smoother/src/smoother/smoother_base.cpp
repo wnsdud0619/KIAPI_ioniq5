@@ -26,6 +26,7 @@
 #include <cmath>
 #include <limits>
 #include <memory>
+#include <utility>
 #include <vector>
 
 namespace autoware::velocity_smoother
@@ -154,7 +155,7 @@ TrajectoryPoints SmootherBase::applyLateralAccelerationFilter(
   TrajectoryPoints output;
   const double points_interval =
     use_resampling ? base_param_.sample_ds : input_points_interval;  // [m]
-  // since the resampling takes a long time, omit the resampling when it is not requested
+  
   if (use_resampling) {
     std::vector<double> out_arclength;
     const auto traj_length = autoware::motion_utils::calcArcLength(input);
@@ -180,6 +181,8 @@ TrajectoryPoints SmootherBase::applyLateralAccelerationFilter(
     static_cast<size_t>(std::round(base_param_.decel_distance_before_curve / points_interval));
   const size_t after_decel_index =
     static_cast<size_t>(std::round(base_param_.decel_distance_after_curve / points_interval));
+  
+  // 실차 Universe 환경의 단일 횡가속도 파라미터 적용
   const double max_lateral_accel_abs = std::fabs(base_param_.max_lateral_accel);
 
   const auto latacc_min_vel_arr =
@@ -196,15 +199,55 @@ TrajectoryPoints SmootherBase::applyLateralAccelerationFilter(
       if (j >= curvature_v.size()) return output;
       curvature = std::max(curvature, std::fabs(curvature_v.at(j)));
     }
-    double v_curvature_max = std::sqrt(max_lateral_accel_abs / std::max(curvature, 1.0E-5));
-    v_curvature_max = std::max(v_curvature_max, base_param_.min_curve_velocity);
+
+    // ##################################################################################
+    // ### [(고속주회로/자율주행시험로) 횡가속도 가변 제어 로직 시작] ###
+    
+    // 1. GUI나 플래너에서 설정한 현재 목표 속도 (단위: m/s) (Point-by-point 방식)
+    double current_target_vel = std::abs(output.at(i).longitudinal_velocity_mps);
+
+    // 2. 자율주행시험로 코너(곡률) 감속을 위한 상/하한선 값
+    const double city_max_lat_acc = 0.7;                             // 자율주행시험로 곡선 통과 값 하한선 (2.52km/h)
+    const double city_min_curve_vel = 2.77;                          // 자율주행시험로 곡선 통과 값 상한선 (10km/h)
+    
+    // 3. 고속주회로 세팅 (실차 Universe 단일 파라미터 적용)
+    const double hwy_max_lat_acc = max_lateral_accel_abs;
+    const double hwy_min_curve_vel = base_param_.min_curve_velocity; 
+
+    const double city_speed_thr = 8.33;                              // 10~30km/h
+    const double hwy_speed_thr = 16.67;                              // 60~km/h
+
+    // 가변 변수 선언
+    double dynamic_max_lat_acc = city_max_lat_acc;
+    double dynamic_min_curve_vel = city_min_curve_vel;
+
+    // 저속 구간일 때는 제한을 많이 풀어둔 YAML 계산식을 버리고 새로 계산!
+    if (current_target_vel < hwy_speed_thr) {
+        if (current_target_vel > city_speed_thr) {
+            double ratio = (current_target_vel - city_speed_thr) / (hwy_speed_thr - city_speed_thr);
+            dynamic_max_lat_acc = city_max_lat_acc + ratio * (hwy_max_lat_acc - city_max_lat_acc);
+            dynamic_min_curve_vel = city_min_curve_vel + ratio * (hwy_min_curve_vel - city_min_curve_vel);
+        }
+    } else {
+        dynamic_max_lat_acc = hwy_max_lat_acc;
+        dynamic_min_curve_vel = hwy_min_curve_vel;
+    }
+
+    // YAML을 무시하고, 가변 횡가속도로 커브 속도 강제 도출
+    double v_curvature_max = std::sqrt(dynamic_max_lat_acc / std::max(curvature, 1.0E-5));
+    v_curvature_max = std::max(v_curvature_max, dynamic_min_curve_vel);
+    
+    // ### [횡가속도 가변 제어 로직 끝] ###
+    // ##################################################################################
 
     if (enable_smooth_limit) {
       if (i >= latacc_min_vel_arr.size()) return output;
       v_curvature_max = std::max(v_curvature_max, latacc_min_vel_arr.at(i));
     }
-    if (output.at(i).longitudinal_velocity_mps > v_curvature_max) {
-      output.at(i).longitudinal_velocity_mps = v_curvature_max;
+    
+    // 타입 캐스팅 에러 방지 처리 추가
+    if (static_cast<double>(output.at(i).longitudinal_velocity_mps) > v_curvature_max) {
+      output.at(i).longitudinal_velocity_mps = static_cast<float>(v_curvature_max);
     }
   }
   return output;
@@ -245,7 +288,7 @@ TrajectoryPoints SmootherBase::applySteeringRateLimit(
     steer_front = std::atan(base_param_.wheel_base * curvature_v.at(i + 1));
     steer_back = std::atan(base_param_.wheel_base * curvature_v.at(i));
 
-    const auto mean_vel = 0.5 * (v_front + v_back);
+    const auto mean_vel = 0.5 * (static_cast<double>(v_front) + static_cast<double>(v_back));
     const auto dt = std::max(points_interval / mean_vel, std::numeric_limits<double>::epsilon());
     const auto steering_diff = std::fabs(steer_front - steer_back);
 
@@ -272,18 +315,60 @@ TrajectoryPoints SmootherBase::applySteeringRateLimit(
     }
 
     const auto mean_vel =
-      (output.at(i).longitudinal_velocity_mps + output.at(i + 1).longitudinal_velocity_mps) / 2.0;
+      (static_cast<double>(output.at(i).longitudinal_velocity_mps) + static_cast<double>(output.at(i + 1).longitudinal_velocity_mps)) / 2.0;
     const auto target_mean_vel =
       mean_vel *
       (autoware::universe_utils::deg2rad(base_param_.max_steering_angle_rate) / steer_rate);
 
+    // =========================================================================
+    // ▼ [2. 조향각 필터: 상/하한선 통제 로직] ▼
+    double current_target_vel_steer = std::abs(output.at(i).longitudinal_velocity_mps);
+    
+    // 자율주행시험로용 저속 조향 변화율 한계치
+    const double city_max_steer_rate = 15.0;                     // 15.0 deg/s
+    const double city_min_curve_vel_steer = 2.77;                // 자율주행시험로 주행 최저 속도 10km/h
+    const double city_speed_thr_steer = 8.33;                    // 30km/h
+
+    // 고속주회로 세팅 (실차 Universe 버전 단일 파라미터 적용)
+    const double hwy_max_steer_rate = base_param_.max_steering_angle_rate;
+    const double hwy_min_curve_vel_steer = base_param_.min_curve_velocity; 
+    const double hwy_speed_thr_steer = 16.67;                    // 60km/h
+
+    double final_velocity_limit = target_mean_vel;
+    double dynamic_min_curve_vel_steer = hwy_min_curve_vel_steer;
+
+    if (current_target_vel_steer < hwy_speed_thr_steer) {
+        double dynamic_max_steer_rate = city_max_steer_rate;
+        dynamic_min_curve_vel_steer = city_min_curve_vel_steer;
+
+        if (current_target_vel_steer > city_speed_thr_steer) {
+            double ratio = (current_target_vel_steer - city_speed_thr_steer) / (hwy_speed_thr_steer - city_speed_thr_steer);
+            dynamic_max_steer_rate = city_max_steer_rate + ratio * (hwy_max_steer_rate - city_max_steer_rate);
+            dynamic_min_curve_vel_steer = city_min_curve_vel_steer + ratio * (hwy_min_curve_vel_steer - city_min_curve_vel_steer);
+        }
+
+        // 저속 구간: YAML 값 무시하고 자율주행시험로 저속 조향각 변화율로 한계 속도 강제 재계산!
+        //final_velocity_limit = autoware_utils_math::deg2rad(dynamic_max_steer_rate) / std::max(steer_rate_arr.at(i), 1.0E-5);
+        final_velocity_limit = autoware::universe_utils::deg2rad(dynamic_max_steer_rate) / std::max(steer_rate_arr.at(i), 1.0E-5);
+    }
+
+    if (mean_vel < final_velocity_limit) {
+      continue;
+    }
+
     for (size_t k = 0; k < 2; k++) {
       auto & velocity = output.at(i + k).longitudinal_velocity_mps;
-      const float target_velocity = std::max(
-        base_param_.min_curve_velocity,
-        std::min(target_mean_vel, velocity * (target_mean_vel / mean_vel)));
-      velocity = std::min(velocity, target_velocity);
+      
+      // 타입 캐스팅 에러 방지 처리 추가
+      double current_vel = static_cast<double>(velocity);
+      double target_velocity = std::max(
+        dynamic_min_curve_vel_steer,
+        std::min(final_velocity_limit, current_vel * (final_velocity_limit / mean_vel)));
+        
+      velocity = static_cast<float>(std::min(current_vel, target_velocity));
     }
+    // ▲ [조향각 필터 가변 로직 끝] ▲
+    // =========================================================================
   }
 
   return output;

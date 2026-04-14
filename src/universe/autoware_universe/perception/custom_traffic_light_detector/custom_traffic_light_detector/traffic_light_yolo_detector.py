@@ -44,11 +44,11 @@ class TrafficLightYoloDetector(Node):
         self.ts.registerCallback(self.sync_callback)
 
         # 5. Publisher
-        self.image_pub = self.create_publisher(Image, "/yolov10_image/debug", 10)
+        self.image_pub = self.create_publisher(Image, "/yolov10_image/debug", 1)
         self.publisher_ = self.create_publisher(
             TrafficLightGroupArray,
             '/perception/traffic_light_recognition/traffic_signals',
-            10
+            1
         )
         
         self.get_logger().info("Traffic Light YOLO Detector (Highest Confidence Global Mode) Initialized.")
@@ -75,7 +75,7 @@ class TrafficLightYoloDetector(Node):
         results = self.model.track(source=cv_img, tracker='botsort.yaml', verbose=False)
         
         group_array_msg = TrafficLightGroupArray()
-        group_array_msg.stamp = img_msg.header.stamp
+        group_array_msg.stamp = self.get_clock().now().to_msg()
         
         # 1. YOLO 결과 중 Confidence가 가장 높은 단 1개의 객체 찾기
         best_yolo_box = None

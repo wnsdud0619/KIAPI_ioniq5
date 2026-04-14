@@ -10,8 +10,8 @@
     max_jerk_threshold: 0.7
     pedal_velocity_thresh: 0.15
     pedal_to_accel_delay: 0.3
-    max_accel: 5.0
-    min_accel: -5.0
+    max_accel: 2.0
+    min_accel: -3.0
     max_data_count: 100
     precision: 3
     update_method: "update_offset_four_cell_around" # or "update_offset_each_cell", "update_offset_total", "update_offset_four_cell_around"

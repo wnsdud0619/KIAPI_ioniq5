@@ -19,7 +19,7 @@
         "max_velocity": {
           "type": "number",
           "description": "max velocity [m/s]",
-          "default": "20.0"
+          "default": "40.0"
         },
         "enable_slow_down": {
           "type": "boolean",

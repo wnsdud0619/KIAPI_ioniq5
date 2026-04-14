@@ -1,4 +1,4 @@
 /**:
   ros__parameters:
     # motion state constraints
-    max_velocity: 30.0      # max velocity limit [m/s]
+    max_velocity: 100.0      # max velocity limit [m/s]
