@@ -425,7 +425,7 @@ QVBoxLayout * AutowareStatePanel::makeVelocityLimitGroup()
     velocity_limit_value_label_->fontMetrics().horizontalAdvance("0"));
 
   CustomSlider * pub_velocity_limit_slider_ = new CustomSlider(Qt::Horizontal);
-  pub_velocity_limit_slider_->setRange(0, 100);
+  pub_velocity_limit_slider_->setRange(0, 130);
   pub_velocity_limit_slider_->setValue(0);
 
   connect(pub_velocity_limit_slider_, &QSlider::sliderPressed, this, [this]() {
