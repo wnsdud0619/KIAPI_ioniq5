@@ -1,0 +1,14 @@
+#projector_type: MGRS
+#vertical_datum: WGS84
+#mgrs_grid: 52SDE
+
+projector_type: LocalCartesianUTM
+vertical_datum: WGS84
+map_origin:
+  latitude: 35.6470846 # [deg]
+  longitude: 128.4019872 # [deg]
+  altitude: 0.0 # [m]
+  utm:
+    zone: 52
+    easting:   445863.095796
+    northing: 3944970.783642
