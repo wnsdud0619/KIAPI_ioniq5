@@ -309,19 +309,11 @@ TrajectoryPoints SmootherBase::applySteeringRateLimit(
       continue;
     }
 
-    const auto steer_rate = steer_rate_arr.at(i);
-    if (steer_rate < autoware::universe_utils::deg2rad(base_param_.max_steering_angle_rate)) {
-      continue;
-    }
-
     const auto mean_vel =
       (static_cast<double>(output.at(i).longitudinal_velocity_mps) + static_cast<double>(output.at(i + 1).longitudinal_velocity_mps)) / 2.0;
-    const auto target_mean_vel =
-      mean_vel *
-      (autoware::universe_utils::deg2rad(base_param_.max_steering_angle_rate) / steer_rate);
 
     // =========================================================================
-    // ▼ [2. 조향각 필터: 상/하한선 통제 로직] ▼
+    // ▼ [2. 조향각 필터: 순서 변경 - 다이나믹 한계치 사전 계산] ▼
     double current_target_vel_steer = std::abs(output.at(i).longitudinal_velocity_mps);
     
     // 자율주행시험로용 저속 조향 변화율 한계치
@@ -334,11 +326,11 @@ TrajectoryPoints SmootherBase::applySteeringRateLimit(
     const double hwy_min_curve_vel_steer = base_param_.min_curve_velocity; 
     const double hwy_speed_thr_steer = 16.67;                    // 60km/h
 
-    double final_velocity_limit = target_mean_vel;
+    double dynamic_max_steer_rate = hwy_max_steer_rate;
     double dynamic_min_curve_vel_steer = hwy_min_curve_vel_steer;
 
     if (current_target_vel_steer < hwy_speed_thr_steer) {
-        double dynamic_max_steer_rate = city_max_steer_rate;
+        dynamic_max_steer_rate = city_max_steer_rate;
         dynamic_min_curve_vel_steer = city_min_curve_vel_steer;
 
         if (current_target_vel_steer > city_speed_thr_steer) {
@@ -346,11 +338,17 @@ TrajectoryPoints SmootherBase::applySteeringRateLimit(
             dynamic_max_steer_rate = city_max_steer_rate + ratio * (hwy_max_steer_rate - city_max_steer_rate);
             dynamic_min_curve_vel_steer = city_min_curve_vel_steer + ratio * (hwy_min_curve_vel_steer - city_min_curve_vel_steer);
         }
-
-        // 저속 구간: YAML 값 무시하고 자율주행시험로 저속 조향각 변화율로 한계 속도 강제 재계산!
-        //final_velocity_limit = autoware_utils_math::deg2rad(dynamic_max_steer_rate) / std::max(steer_rate_arr.at(i), 1.0E-5);
-        final_velocity_limit = autoware::universe_utils::deg2rad(dynamic_max_steer_rate) / std::max(steer_rate_arr.at(i), 1.0E-5);
     }
+
+    // YAML 고정값이 아닌 '다이나믹 한계치'를 기준으로 검사하여 코너 중반 가속 튐 방지
+    const auto steer_rate = steer_rate_arr.at(i);
+    if (steer_rate < autoware::universe_utils::deg2rad(dynamic_max_steer_rate)) {
+      continue;
+    }
+
+    // 다이나믹 한계치를 바탕으로 목표 속도 연산
+    const double final_velocity_limit = 
+      mean_vel * (autoware::universe_utils::deg2rad(dynamic_max_steer_rate) / std::max(steer_rate, 1.0E-5));
 
     if (mean_vel < final_velocity_limit) {
       continue;
