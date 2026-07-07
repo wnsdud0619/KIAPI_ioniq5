@@ -3,6 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from autoware_vehicle_msgs.msg import VelocityReport
+from autoware_vehicle_msgs.msg import GearReport
 from sensor_msgs.msg import Imu
 
 ### 250716 added
@@ -35,6 +36,13 @@ class Velinfo(Node):
         self.sub_bestvel = self.create_subscription(BESTVEL, '/novatel/oem7/bestvel', self.BESTVELCallback, 10)
         self.sub_corrimu = self.create_subscription(CORRIMU, '/novatel/oem7/corrimu', self.CORRIMUCallback, 10)
 
+        # SH-NDT 후진 위치추정 로직 추가: 기어 상태를 구독하여 후진 여부 파악
+        self.current_gear = GearReport.NONE
+        self.sub_gear = self.create_subscription(GearReport, '/vehicle/status/gear_status', self.GearCallback, 10)
+
+    def GearCallback(self, msg):
+        self.current_gear = msg.report
+
         # self.sub_imu = self.create_subscription(Imu, '/novatel/oem7/imu/data_raw', self.ImuCallback, 10)
         # self.sub_imu = self.create_subscription(Odometry, '/novatel/oem7/odom', self.OdomCallback, 10)
 
@@ -46,7 +54,13 @@ class Velinfo(Node):
         vel_msg = VelocityReport()
         vel_msg.header.stamp = msg.header.stamp
         vel_msg.header.frame_id = 'base_link'
-        vel_msg.longitudinal_velocity = msg.hor_speed
+        
+        # SH-NDT 후진 위치추정 로직 추가: 후진 기어일 경우 속도에 마이너스(-)를 붙여 차량이 뒤로 가는 것을 NDT에 올바르게 전달
+        if self.current_gear == GearReport.REVERSE or self.current_gear == GearReport.REVERSE_2:
+            vel_msg.longitudinal_velocity = -abs(msg.hor_speed)
+        else:
+            vel_msg.longitudinal_velocity = abs(msg.hor_speed)
+            
         vel_msg.lateral_velocity = 0.0
         vel_msg.heading_rate = self.heading_rate
         self.pub.publish(vel_msg)

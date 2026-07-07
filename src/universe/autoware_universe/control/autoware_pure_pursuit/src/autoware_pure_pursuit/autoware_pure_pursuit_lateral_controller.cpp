@@ -71,13 +71,15 @@ PurePursuitLateralController::PurePursuitLateralController(rclcpp::Node & node)
   param_.max_steering_angle = vehicle_info.max_steer_angle_rad;
 
   // Algorithm Parameters
-  param_.ld_velocity_ratio = node.declare_parameter<double>("ld_velocity_ratio");
+  // SH 로직 추가: 속도별 다중 값(Array) 파라미터 로딩
+  param_.velocity_breakpoints = node.declare_parameter<std::vector<double>>("velocity_breakpoints");
+  param_.ld_velocity_ratio_array = node.declare_parameter<std::vector<double>>("ld_velocity_ratio_array");
   param_.ld_lateral_error_ratio = node.declare_parameter<double>("ld_lateral_error_ratio");
   param_.ld_curvature_ratio = node.declare_parameter<double>("ld_curvature_ratio");
   param_.long_ld_lateral_error_threshold =
     node.declare_parameter<double>("long_ld_lateral_error_threshold");
-  param_.min_lookahead_distance = node.declare_parameter<double>("min_lookahead_distance");
-  param_.max_lookahead_distance = node.declare_parameter<double>("max_lookahead_distance");
+  param_.min_lookahead_distance_array = node.declare_parameter<std::vector<double>>("min_lookahead_distance_array");
+  param_.max_lookahead_distance_array = node.declare_parameter<std::vector<double>>("max_lookahead_distance_array");
   param_.reverse_min_lookahead_distance =
     node.declare_parameter<double>("reverse_min_lookahead_distance");
   param_.converged_steer_rad_ = node.declare_parameter<double>("converged_steer_rad");
@@ -105,7 +107,14 @@ double PurePursuitLateralController::calcLookaheadDistance(
   const double lateral_error, const double curvature, const double velocity, const double min_ld,
   const bool is_control_cmd)
 {
-  const double vel_ld = abs(param_.ld_velocity_ratio * velocity);
+  // SH 로직 추가: 현재 속도에 맞춰 ld_velocity_ratio와 max_ld 값을 동적으로 선형 보간 (범위 초과 에러 방지를 위해 clamp 추가)
+  const double abs_vel = std::abs(velocity);
+  const double query_vel = std::clamp(abs_vel, param_.velocity_breakpoints.front(), param_.velocity_breakpoints.back());
+
+  const double interpolated_ld_velocity_ratio = autoware::interpolation::lerp(param_.velocity_breakpoints, param_.ld_velocity_ratio_array, query_vel);
+  const double interpolated_max_ld = autoware::interpolation::lerp(param_.velocity_breakpoints, param_.max_lookahead_distance_array, query_vel);
+
+  const double vel_ld = abs(interpolated_ld_velocity_ratio * velocity);
   const double curvature_ld = -abs(param_.ld_curvature_ratio * curvature);
   double lateral_error_ld = 0.0;
 
@@ -116,7 +125,7 @@ double PurePursuitLateralController::calcLookaheadDistance(
   }
 
   const double total_ld =
-    std::clamp(vel_ld + curvature_ld + lateral_error_ld, min_ld, param_.max_lookahead_distance);
+    std::clamp(vel_ld + curvature_ld + lateral_error_ld, min_ld, interpolated_max_ld);
 
   auto pubDebugValues = [&]() {
     autoware_internal_debug_msgs::msg::Float32MultiArrayStamped debug_msg{};
@@ -450,15 +459,16 @@ boost::optional<PpOutput> PurePursuitLateralController::calcTargetCurvature(
   // Calculate lookahead distance
 
   const bool is_reverse = (target_vel < 0);
+  // SH 로직 추가: 실시간 속도를 기반으로 최소 Look-ahead 거리를 선형 보간 (범위 초과 에러 방지를 위해 clamp 추가)
+  const double vel_for_ld = is_control_output ? current_odometry_.twist.twist.linear.x : target_vel;
+  const double abs_vel_for_ld = std::abs(vel_for_ld);
+  const double query_vel_for_ld = std::clamp(abs_vel_for_ld, param_.velocity_breakpoints.front(), param_.velocity_breakpoints.back());
+  
   const double min_lookahead_distance =
-    is_reverse ? param_.reverse_min_lookahead_distance : param_.min_lookahead_distance;
-  double lookahead_distance =
-    is_control_output
-      ? calcLookaheadDistance(
-          lateral_error, current_curvature, current_odometry_.twist.twist.linear.x,
-          min_lookahead_distance, is_control_output)
-      : calcLookaheadDistance(
-          lateral_error, current_curvature, target_vel, min_lookahead_distance, is_control_output);
+    is_reverse ? param_.reverse_min_lookahead_distance : autoware::interpolation::lerp(param_.velocity_breakpoints, param_.min_lookahead_distance_array, query_vel_for_ld);
+
+  double lookahead_distance = calcLookaheadDistance(
+          lateral_error, current_curvature, vel_for_ld, min_lookahead_distance, is_control_output);
 
   // Set PurePursuit data
   pure_pursuit_->setCurrentPose(pose);

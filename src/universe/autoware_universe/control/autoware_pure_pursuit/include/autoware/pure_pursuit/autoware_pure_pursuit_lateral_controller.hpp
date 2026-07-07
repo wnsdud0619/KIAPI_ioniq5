@@ -37,6 +37,9 @@
 #include "tf2_ros/buffer.h"
 #include "tf2_ros/transform_listener.h"
 
+// SH 로직 추가: 속도별 가변 Lookahead 계산을 위한 선형 보간 헤더
+#include <autoware/interpolation/linear_interpolation.hpp>
+
 #include <autoware/motion_utils/resample/resample.hpp>
 #include <autoware/motion_utils/trajectory/conversion.hpp>
 #include <autoware/motion_utils/trajectory/trajectory.hpp>
@@ -76,11 +79,13 @@ struct Param
   double max_steering_angle;  // [rad]
 
   // Algorithm Parameters
-  double ld_velocity_ratio;
+  // SH 로직 추가: 속도별 다중 값(Array) 파라미터 선언
+  std::vector<double> velocity_breakpoints;
+  std::vector<double> ld_velocity_ratio_array;
   double ld_lateral_error_ratio;
   double ld_curvature_ratio;
-  double min_lookahead_distance;
-  double max_lookahead_distance;
+  std::vector<double> min_lookahead_distance_array;
+  std::vector<double> max_lookahead_distance_array;
   double reverse_min_lookahead_distance;  // min_lookahead_distance in reverse gear
   double converged_steer_rad_;
   double prediction_ds;

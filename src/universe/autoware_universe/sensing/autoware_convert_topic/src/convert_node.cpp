@@ -6,6 +6,7 @@
 #include "novatel_oem7_msgs/msg/bestvel.hpp"
 #include "novatel_oem7_msgs/msg/corrimu.hpp"
 #include "autoware_vehicle_msgs/msg/velocity_report.hpp"
+#include "autoware_vehicle_msgs/msg/gear_report.hpp"
 
 
 class ConvertNode : public rclcpp::Node
@@ -47,7 +48,15 @@ public:
         corrimu_sub_ = this->create_subscription<novatel_oem7_msgs::msg::CORRIMU>(
             "/novatel/oem7/corrimu", 10,
             [this](novatel_oem7_msgs::msg::CORRIMU::SharedPtr msg) {
-                publishVelocityReport(vel_data_.hor_speed, vel_data_.ver_speed, msg->yaw_rate);
+                // SH-로직: 수직 속도(ver_speed)가 횡방향 속도(lateral)로 들어가는 버그 수정 (0.0으로 고정)
+                publishVelocityReport(vel_data_.hor_speed, 0.0, msg->yaw_rate);
+            });
+
+        // SH-NDT 후진 위치추정 로직 추가: 기어 상태를 구독하여 후진 여부 파악
+        gear_sub_ = this->create_subscription<autoware_vehicle_msgs::msg::GearReport>(
+            "/vehicle/status/gear_status", 10,
+            [this](autoware_vehicle_msgs::msg::GearReport::SharedPtr msg) {
+                current_gear_ = msg->report;
             });
 
     }
@@ -58,7 +67,15 @@ private:
         autoware_vehicle_msgs::msg::VelocityReport report;
         report.header.stamp = vel_data_.header.stamp;
         report.header.frame_id = "base_link";
-        report.longitudinal_velocity = longitudinal_velocity;
+
+        // SH-NDT 후진 위치추정 로직 추가: 후진 기어일 경우 속도에 마이너스(-)를 붙여 차량이 뒤로 가는 것을 NDT에 올바르게 전달
+        if (current_gear_ == autoware_vehicle_msgs::msg::GearReport::REVERSE || 
+            current_gear_ == autoware_vehicle_msgs::msg::GearReport::REVERSE_2) {
+            report.longitudinal_velocity = -std::abs(longitudinal_velocity);
+        } else {
+            report.longitudinal_velocity = std::abs(longitudinal_velocity);
+        }
+
         report.lateral_velocity = lateral_velocity;
         report.heading_rate = heading_rate;
 
@@ -81,6 +98,9 @@ private:
 
     rclcpp::Subscription<novatel_oem7_msgs::msg::CORRIMU>::SharedPtr corrimu_sub_;
     novatel_oem7_msgs::msg::BESTVEL vel_data_;
+
+    rclcpp::Subscription<autoware_vehicle_msgs::msg::GearReport>::SharedPtr gear_sub_;
+    uint8_t current_gear_ = autoware_vehicle_msgs::msg::GearReport::NONE;
 };
 
 int main(int argc, char * argv[])
