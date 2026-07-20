@@ -131,6 +131,9 @@ private:
 
   // Traffic Light State
   TrafficSignal looking_tl_state_;
+
+  // JY Track the duration of the unknown traffic light state
+  std::optional<Time> unknown_state_start_time_;
 };
 }  // namespace autoware::behavior_velocity_planner
 

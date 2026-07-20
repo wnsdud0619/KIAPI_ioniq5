@@ -102,6 +102,8 @@ bool TrafficLightModule::modifyPathVelocity(PathWithLaneId * path)
       RCLCPP_DEBUG(logger_, "APPROACH -> GO_OUT");
       state_ = State::GO_OUT;
       stop_signal_received_time_ptr_.reset();
+      // JY
+      unknown_state_start_time_.reset();
       return true;
     }
 
@@ -150,6 +152,8 @@ bool TrafficLightModule::modifyPathVelocity(PathWithLaneId * path)
       }
     }
     stop_signal_received_time_ptr_.reset();
+    // JY
+    unknown_state_start_time_.reset();
     return true;
   }
 
@@ -160,21 +164,40 @@ bool TrafficLightModule::isStopSignal()
 {
   updateTrafficSignal();
 
-  // If there is no upcoming traffic signal information,
-  //   SIMULATION: it will PASS to prevent stopping on the planning simulator
-  //   or scenario simulator.
-  //   REAL ENVIRONMENT: it will STOP for safety in cases such that traffic light
-  //   recognition is not working properly or the map is incorrect.
-  if (!traffic_signal_stamp_) {
-    if (planner_data_->is_simulation) {
-      return false;
-    }
-    return true;
+  // JY If there is no upcoming traffic signal information, or the traffic signal list is empty,
+  // we will PASS (return false). This prevents the vehicle from stopping at sections with no traffic lights.
+  if (!traffic_signal_stamp_ || looking_tl_state_.elements.empty()) {
+    return false;
   }
 
   // Stop if the traffic signal information has timed out
   if (isTrafficSignalTimedOut()) {
     return true;
+  }
+
+  // JY Check if the current traffic signal state is UNKNOWN
+  bool is_unknown = false;
+  if (!looking_tl_state_.elements.empty()) {
+    is_unknown = std::any_of(
+      looking_tl_state_.elements.begin(), looking_tl_state_.elements.end(),
+      [](const auto & element) {
+        return element.color == autoware_perception_msgs::msg::TrafficLightElement::UNKNOWN;
+      });
+  }
+
+  if (is_unknown) {
+    if (!unknown_state_start_time_) {
+      unknown_state_start_time_ = clock_->now();
+    } else {
+      const double duration = (clock_->now() - *unknown_state_start_time_).seconds();
+      // JY
+      if (duration >= 5.0) {
+        // If unknown state lasts for 5 seconds or more, pass.
+        return false;
+      }
+    }
+  } else {
+    unknown_state_start_time_ = std::nullopt;
   }
 
   // Check if the current traffic signal state requires stopping
@@ -185,7 +208,9 @@ void TrafficLightModule::updateTrafficSignal()
 {
   TrafficSignalStamped signal;
   if (!findValidTrafficSignal(signal)) {
-    // Don't stop if it never receives traffic light topic.
+    // JY Don't stop if it never receives traffic light topic.
+    traffic_signal_stamp_ = std::nullopt;
+    looking_tl_state_ = TrafficSignal();
     return;
   }
 
